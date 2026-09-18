@@ -1,0 +1,40 @@
+# Finding the Gaps
+
+Small probes of where frontier AI models still fail. CS 91r, Harvard, Fall 2026. Supervisor: Christopher Thorpe.
+
+Not a benchmark. Six to eight small experiments, each 10 to 25 hand-written problems or one build task, run against two or three frontier models, written up in one or two pages. The goal is a short, evidence-backed taxonomy of gaps in mathematics, biology, and software building.
+
+## Probes
+
+| Probe | Title | Area | Status |
+|---|---|---|---|
+| [01-math-constructions](probes/01-math-constructions) | Math: long constructions | math | not started |
+| [02-math-casework](probes/02-math-casework) | Math: heavy casework | math | not started |
+| [03-math-false-claims](probes/03-math-false-claims) | Math: prove-this claims that are actually false | math | not started |
+| [04-math-lean](probes/04-math-lean) | Math: statements to be checked in Lean 4 | math | not started |
+| [05-bio-recent-papers](probes/05-bio-recent-papers) | Biology: questions from post-cutoff open access papers | biology | not started |
+| [06-bio-figure-reading](probes/06-bio-figure-reading) | Biology: figure and table reading | biology | not started |
+| [07-build-cli-tool](probes/07-build-cli-tool) | Software: build a small CLI tool end to end | software | not started |
+| [08-build-web-app](probes/08-build-web-app) | Software: build and deploy a tiny web app | software | not started |
+
+## Layout
+
+Each probe folder has the same shape:
+
+```
+probes/<slug>/
+  problems/    what the model sees, one file per item (or task.md for build tasks)
+  key/         answers and graders (key.json), Lean files, acceptance criteria
+  outputs/     raw model outputs, never edited
+  results.md   the numbers
+  writeup.md   one to two pages: hypothesis, setup, what happened, gap or no gap
+```
+
+`harness/` runs and grades items. `report/` holds the running taxonomy, the week 7 status report, and the final report.
+
+## Rules I am holding myself to
+
+- Every problem is written by me, after the models' training cutoffs where that matters.
+- Several samples per problem. Model versions and prompts recorded.
+- Raw outputs are committed as is.
+- A probe that finds no gap still gets a writeup.
