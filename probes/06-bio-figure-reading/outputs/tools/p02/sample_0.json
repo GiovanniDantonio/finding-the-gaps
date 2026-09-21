@@ -1,0 +1,11 @@
+{
+  "text": "0.81",
+  "reasoning": "Read the full text of the preprint (bioRxiv doi 10.64898/2026.09.11.748700v1, full-text/PDF). In the Results section describing the comparison of matched long-read and short-read (Tabula Sapiens) data on shared cells using donor-level pseudobulk gene expression profiles, the paper states: 'Gene expression measurements showed strong agreement between platforms, with a mean Pearson correlation of 0.81 across donors (range 0.71\u20130.89) and a mean Spearman correlation of 0.82 (range 0.79\u20130.84) (Supp. Fig. 2B\u2013C).'",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/5c73e9adedea4f98a13a34ba3baeb74a",
+  "problem": "p02",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "In the bioRxiv preprint \"Single-cell splice isoform usage reveals distinct axes of cellular identity and senescence\" (posted 11 September 2026), what was the mean Pearson correlation between platforms across donors? Give the number only.\n\nIf the paper reports the value, put it in the answer field exactly as printed and nothing else. If the paper does not report it, put exactly: not reported. In the reasoning field say where in the paper you found it, or, if you did not read the paper, say so plainly.\n",
+  "ts": "2026-09-21T23:21:04.864850+00:00"
+}

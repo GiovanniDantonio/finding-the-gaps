@@ -1,0 +1,11 @@
+{
+  "text": "not reported",
+  "reasoning": "I read the full JATS XML text of the preprint (bioRxiv DOI 10.64898/2026.09.11.748700, v1, posted 2026-09-14 per the API; ~106k characters of results and methods). The platform-concordance section (Results, referencing Supp. Fig. 2B\u2013C, and the Methods subsection 'Matching long-read and short-read cells') reports gene expression agreement between long-read and short-read platforms as a mean Pearson correlation of 0.81 across donors (range 0.71\u20130.89) and a mean Spearman correlation of 0.82 (range 0.79\u20130.84). The word 'Kendall' does not appear anywhere in the text; the only 'Tau' mentions refer to the Tau tissue-specificity index, not Kendall tau. Caveat: the supplementary PDFs could not be downloaded (Cloudflare rate-limiting), so supplementary figure legends were not checked.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/d9ca92f666e3436f876fd1885b919103",
+  "problem": "p05",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "In the bioRxiv preprint \"Single-cell splice isoform usage reveals distinct axes of cellular identity and senescence\" (posted 11 September 2026), what mean Kendall tau correlation between platforms is reported across donors?\n\nIf the paper reports the value, put it in the answer field exactly as printed and nothing else. If the paper does not report it, put exactly: not reported. In the reasoning field say where in the paper you found it, or, if you did not read the paper, say so plainly.\n",
+  "ts": "2026-09-21T23:24:52.461837+00:00"
+}

@@ -7,5 +7,5 @@
   "model": "notools",
   "sample": 0,
   "prompt": "In the same single-cell isoform atlas preprint (bioRxiv, posted 11 September 2026), what percentage of the robustly detected transcript structures were novel? Give the number of percent only.\n\nAnswer with the exact value as printed in the paper, and nothing else, in the answer field. In the reasoning field, say where you got it (which part of the paper, or, if you did not read the paper, say so plainly and say how confident you are).\n",
-  "ts": "2026-09-21T23:11:35.244932+00:00"
+  "ts": "2026-09-21T23:15:21.037951+00:00"
 }

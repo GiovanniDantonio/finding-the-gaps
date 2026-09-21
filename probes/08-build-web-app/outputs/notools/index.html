@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overlap – meeting times across time zones</title>
+<style>
+:root{--bg:#fff;--fg:#1a1a1a;--muted:#5f5f5f;--line:#d9d9d9;--accent:#0b5cad;--band:#e8f2fb;--focus:#ff9800;--err:#b00020}
+@media (prefers-color-scheme:dark){:root{--bg:#121212;--fg:#ececec;--muted:#a8a8a8;--line:#333;--accent:#7ab8ff;--band:#15283a;--err:#ff6b7a}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.45 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+main{max-width:980px;margin:0 auto;padding:1rem}
+h1{font-size:1.5rem;margin:0 0 .25rem}
+h2{font-size:1.1rem;margin:0 0 .5rem}
+.lead{color:var(--muted);margin:0 0 1rem}
+section{border:1px solid var(--line);border-radius:8px;margin:0 0 1rem;padding:.75rem}
+label{display:block;font-size:.85rem;color:var(--muted)}
+input,button{font:inherit;color:inherit;background:var(--bg)}
+input{border:1px solid var(--line);border-radius:6px;padding:.45rem .5rem;width:100%;min-height:2.5rem}
+input[type=checkbox]{width:auto;min-height:0;margin-right:.4rem}
+input:focus-visible,button:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+button{border:1px solid var(--accent);border-radius:6px;padding:.45rem .8rem;min-height:2.5rem;cursor:pointer;background:var(--accent);color:#fff}
+button.secondary{background:transparent;color:var(--accent)}
+.row{display:grid;grid-template-columns:1fr 1.5fr 6.5rem 6.5rem auto;gap:.5rem;align-items:end;margin-bottom:.5rem}
+@media (max-width:640px){.row{grid-template-columns:1fr 1fr}.row .wide{grid-column:1/-1}}
+.err{color:var(--err);font-size:.9rem;margin:.25rem 0}
+.small{font-size:.85rem;color:var(--muted)}
+.inline{display:flex;flex-wrap:wrap;gap:1rem;align-items:end}
+.inline>div{flex:1 1 14rem}
+.tablewrap{overflow-x:auto;-webkit-overflow-scrolling:touch;max-height:70vh;overflow-y:auto;border:1px solid var(--line);border-radius:6px}
+table{border-collapse:collapse;width:100%;font-size:.9rem}
+th,td{border-bottom:1px solid var(--line);padding:.35rem .5rem;text-align:left;white-space:nowrap;vertical-align:top}
+thead th{position:sticky;top:0;background:var(--bg);z-index:1}
+tr.day th{background:var(--band);font-weight:600}
+td small{display:block;color:var(--muted);font-size:.75rem}
+tr.shift td{border-top:2px dashed var(--accent)}
+.note{font-size:.8rem;color:var(--accent)}
+.sr{position:absolute;left:-9999px}
+</style>
+</head>
+<body>
+<main>
+<h1>Overlap</h1>
+<p class="lead">Find 30‑minute slots in the next 7 days when everyone is inside their own working hours. Times use your browser's time zone database; the participant list is stored in the page URL, so you can copy the address bar to share it.</p>
+
+<section aria-labelledby="h-add">
+<h2 id="h-add">Add a participant</h2>
+<form id="add" novalidate>
+<div class="row">
+<div><label for="a-name">Name</label><input id="a-name" autocomplete="off" placeholder="Ana"></div>
+<div class="wide"><label for="a-tz">City / time zone (IANA name, e.g. Asia/Kolkata)</label><input id="a-tz" list="zones" autocomplete="off" spellcheck="false" placeholder="Europe/Rome" required></div>
+<div><label for="a-start">Start (local)</label><input id="a-start" type="time" step="1800" value="09:00"></div>
+<div><label for="a-end">End (local)</label><input id="a-end" type="time" step="1800" value="17:00"></div>
+<div><button type="submit">Add</button></div>
+</div>
+<p id="add-err" class="err" role="alert"></p>
+</form>
+<datalist id="zones"></datalist>
+</section>
+
+<section aria-labelledby="h-list">
+<h2 id="h-list">Participants</h2>
+<div id="list"></div>
+<div class="inline">
+<div><label for="viewer">Show results in time zone (yours by default)</label><input id="viewer" list="zones" autocomplete="off" spellcheck="false"></div>
+<div><label><input id="weekends" type="checkbox">Skip Saturday and Sunday (in each participant's local calendar)</label></div>
+<div><button type="button" class="secondary" id="copy">Copy share link</button> <span id="copied" class="small" role="status"></span></div>
+</div>
+</section>
+
+<section aria-labelledby="h-res">
+<h2 id="h-res">Available slots</h2>
+<p id="summary" class="small" role="status" aria-live="polite"></p>
+<div id="errors" role="alert"></div>
+<div id="results"></div>
+</section>
+</main>
+
+<script>
+(function(){
+'use strict';
+var $=function(s){return document.querySelector(s);};
+var SLOT=30*60*1000, DAYS=7;
+var viewerDefault='UTC';
+try{viewerDefault=Intl.DateTimeFormat().resolvedOptions().timeZone||'UTC';}catch(e){}
+var zones=[];
+try{zones=Intl.supportedValuesOf('timeZone');}catch(e){zones=['UTC','Europe/London','Europe/Berlin','Europe/Rome','Europe/Madrid','Europe/Moscow','Asia/Dubai','Asia/Kolkata','Asia/Kathmandu','Asia/Shanghai','Asia/Singapore','Asia/Tokyo','Australia/Adelaide','Australia/Sydney','Pacific/Auckland','America/Sao_Paulo','America/New_York','America/Chicago','America/Denver','America/Los_Angeles','America/St_Johns','Africa/Johannesburg','Africa/Lagos'];}
+if(zones.indexOf(viewerDefault)<0)zones.push(viewerDefault);
+var dl=$('#zones');zones.forEach(function(z){var o=document.createElement('option');o.value=z;dl.appendChild(o);});
+
+var fmtCache={};
+function fmt(tz){return fmtCache[tz]||(fmtCache[tz]=new Intl.DateTimeFormat('en-US',{timeZone:tz,hourCycle:'h23',weekday:'short',month:'short',day:'numeric',hour:'2-digit',minute:'2-digit',timeZoneName:'short'}));}
+function local(d,tz){var o={};var parts=fmt(tz).formatToParts(d);for(var i=0;i<parts.length;i++)o[parts[i].type]=parts[i].value;var h=parseInt(o.hour,10)%24,m=parseInt(o.minute,10);o.mins=h*60+m;o.hhmm=pad(h)+':'+pad(m);o.date=o.weekday+' '+o.month+' '+o.day;return o;}
+function pad(n){return (n<10?'0':'')+n;}
+function validZone(tz){if(!tz)return false;try{new Intl.DateTimeFormat('en-US',{timeZone:tz});return true;}catch(e){return false;}}
+function resolveZone(s){s=(s||'').trim();if(!s)return null;if(validZone(s))return s;var k=s.toLowerCase().replace(/\s+/g,'_');for(var i=0;i<zones.length;i++)if(zones[i].toLowerCase()===k)return zones[i];for(i=0;i<zones.length;i++){var last=zones[i].split('/').pop().toLowerCase();if(last===k)return zones[i];}return null;}
+function toMins(s){var m=/^(\d{1,2}):(\d{2})$/.exec(s||'');if(!m)return null;var h=+m[1],mi=+m[2];if(h>23||mi>59)return null;return h*60+mi;}
+function toHHMM(m){return pad(Math.floor(m/60))+':'+pad(m%60);}
+function esc(s){return String(s).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});}
+
+var state={p:[],w:false,v:''};
+function readHash(){try{var h=location.hash.slice(1);if(!h)return null;try{h=decodeURIComponent(h);}catch(e){}var o=JSON.parse(h);if(!o||!Array.isArray(o.p))return null;var p=[];o.p.forEach(function(x){if(Array.isArray(x)&&x.length>=4){var st=+x[2],en=+x[3];if(!isFinite(st)||!isFinite(en))return;p.push({name:String(x[0]).slice(0,60),tz:String(x[1]),start:Math.max(0,Math.min(1439,st)),end:Math.max(0,Math.min(1439,en))});}});return {p:p,w:!!o.w,v:typeof o.v==='string'?o.v:''};}catch(e){return null;}}
+function writeHash(){var o={p:state.p.map(function(x){return [x.name,x.tz,x.start,x.end];}),w:state.w?1:0};if(state.v)o.v=state.v;var enc='#'+encodeURIComponent(JSON.stringify(o));try{history.replaceState(null,'',enc);}catch(e){location.hash=enc;}}
+
+function renderList(){var wrap=$('#list');wrap.innerHTML='';if(!state.p.length){wrap.innerHTML='<p class="small">No participants yet. Add at least one above.</p>';return;}
+state.p.forEach(function(p,i){var div=document.createElement('div');div.className='row';div.setAttribute('role','group');div.setAttribute('aria-label','Participant '+(i+1)+(p.name?' '+p.name:''));div.dataset.i=i;
+div.innerHTML='<div><label for="n'+i+'">Name</label><input id="n'+i+'" data-k="name" autocomplete="off"></div>'+
+'<div class="wide"><label for="z'+i+'">City / time zone</label><input id="z'+i+'" data-k="tz" list="zones" autocomplete="off" spellcheck="false"></div>'+
+'<div><label for="s'+i+'">Start (local)</label><input id="s'+i+'" data-k="start" type="time" step="1800"></div>'+
+'<div><label for="e'+i+'">End (local)</label><input id="e'+i+'" data-k="end" type="time" step="1800"></div>'+
+'<div><button type="button" class="secondary" data-rm="'+i+'" aria-label="Remove '+esc(p.name||('participant '+(i+1)))+'">Remove</button></div>';
+div.querySelector('[data-k=name]').value=p.name;div.querySelector('[data-k=tz]').value=p.tz;div.querySelector('[data-k=start]').value=toHHMM(p.start);div.querySelector('[data-k=end]').value=toHHMM(p.end);wrap.appendChild(div);});}
+
+$('#list').addEventListener('change',function(e){var t=e.target;var row=t.closest('.row');if(!row||!t.dataset.k)return;var p=state.p[+row.dataset.i];if(!p)return;var k=t.dataset.k;
+if(k==='name')p.name=t.value.trim().slice(0,60);
+else if(k==='tz'){var z=resolveZone(t.value);if(z){p.tz=z;t.value=z;}else p.tz=t.value.trim();}
+else{var m=toMins(t.value);if(m!==null)p[k]=m;else t.value=toHHMM(p[k]);}
+writeHash();compute();});
+$('#list').addEventListener('click',function(e){var b=e.target.closest('[data-rm]');if(!b)return;state.p.splice(+b.dataset.rm,1);writeHash();renderList();compute();$('#a-name').focus();});
+
+$('#add').addEventListener('submit',function(e){e.preventDefault();var err=$('#add-err');err.textContent='';var name=$('#a-name').value.trim().slice(0,60);var tz=resolveZone($('#a-tz').value);var st=toMins($('#a-start').value),en=toMins($('#a-end').value);
+if(!tz){err.textContent='Unknown time zone "'+$('#a-tz').value+'". Pick an IANA name from the list, e.g. Asia/Kolkata or America/New_York.';$('#a-tz').focus();return;}
+if(st===null||en===null){err.textContent='Enter start and end times as HH:MM.';return;}
+if(st===en){err.textContent='Start and end cannot be the same.';return;}
+state.p.push({name:name||tz.split('/').pop().replace(/_/g,' '),tz:tz,start:st,end:en});writeHash();renderList();compute();$('#a-name').value='';$('#a-tz').value='';$('#a-start').value='09:00';$('#a-end').value='17:00';$('#a-name').focus();});
+
+$('#viewer').addEventListener('change',function(){var v=resolveZone(this.value);if(!this.value.trim()){state.v='';}else if(v){state.v=v;this.value=v;}else{this.value=state.v||viewerDefault;}writeHash();compute();});
+$('#weekends').addEventListener('change',function(){state.w=this.checked;writeHash();compute();});
+$('#copy').addEventListener('click',function(){var url=location.href,out=$('#copied');function done(ok){out.textContent=ok?'Link copied.':'Copy failed – copy the address bar instead.';setTimeout(function(){out.textContent='';},3000);}
+if(navigator.clipboard&&navigator.clipboard.writeText)navigator.clipboard.writeText(url).then(function(){done(true);},function(){done(false);});else done(false);});
+
+function inside(p,mins){if(p.start<p.end)return mins>=p.start&&mins+30<=p.end;return mins>=p.start||mins+30<=p.end;}
+
+function compute(){var viewer=validZone(state.v)?state.v:viewerDefault;var errs=[],res=$('#results'),sum=$('#summary'),eb=$('#errors');eb.innerHTML='';
+state.p.forEach(function(p,i){var who='Participant '+(i+1)+(p.name?' ('+p.name+')':'');if(!validZone(p.tz))errs.push(who+': unknown time zone "'+p.tz+'".');if(p.start===p.end)errs.push(who+': start and end are the same.');});
+if(errs.length){eb.innerHTML=errs.map(function(s){return '<p class="err">'+esc(s)+'</p>';}).join('');res.innerHTML='';sum.textContent='Fix the errors above to see slots.';return;}
+if(!state.p.length){res.innerHTML='';sum.textContent='Add participants to see overlapping slots.';return;}
+var t0=Math.ceil(Date.now()/SLOT)*SLOT,t1=t0+DAYS*86400000,rows=[];
+for(var t=t0;t<t1;t+=SLOT){var d=new Date(t),locs=[],ok=true;for(var i=0;i<state.p.length;i++){var p=state.p[i],l=local(d,p.tz);if(!inside(p,l.mins)||(state.w&&(l.weekday==='Sat'||l.weekday==='Sun'))){ok=false;break;}locs.push(l);}if(ok)rows.push({t:t,v:local(d,viewer),locs:locs});}
+sum.textContent=rows.length?rows.length+' slot'+(rows.length===1?'':'s')+' of 30 minutes in the next 7 days, shown in '+viewer+'. Dashed lines mark where a clock change (daylight saving) shifted the overlap.':'No 30‑minute slot in the next 7 days where everyone is working. Try widening someone\'s hours.';
+if(!rows.length){res.innerHTML='';return;}
+var h='<div class="tablewrap"><table><caption class="sr">Overlapping slots</caption><thead><tr><th scope="col">You<small>'+esc(viewer)+'</small></th>';
+state.p.forEach(function(p){h+='<th scope="col">'+esc(p.name||p.tz)+'<small>'+esc(p.tz)+' · '+toHHMM(p.start)+'–'+toHHMM(p.end)+'</small></th>';});
+h+='</tr></thead><tbody>';var lastDay=null,lastKey=null;
+rows.forEach(function(r){var key=r.locs.map(function(l){return ((l.mins-r.v.mins)%1440+1440)%1440;}).join(',');var shift=lastKey!==null&&key!==lastKey&&lastDay===r.v.date;
+if(r.v.date!==lastDay){h+='<tr class="day"><th scope="rowgroup" colspan="'+(state.p.length+1)+'">'+esc(r.v.date)+'</th></tr>';lastDay=r.v.date;}
+var endV=local(new Date(r.t+SLOT),viewer);
+h+='<tr'+(shift?' class="shift"':'')+'><th scope="row">'+r.v.hhmm+'–'+endV.hhmm+'<small>'+esc(r.v.timeZoneName)+(shift?' <span class="note">clock change</span>':'')+'</small></th>';
+r.locs.forEach(function(l){var end=local(new Date(r.t+SLOT),l.tz?l.tz:viewer);h+='<td>'+l.hhmm+'<small>'+esc(l.date)+' · '+esc(l.timeZoneName)+'</small></td>';});
+h+='</tr>';lastKey=key;});
+h+='</tbody></table></div>';res.innerHTML=h;}
+
+function load(){var s=readHash();if(s)state=s;$('#viewer').value=state.v||viewerDefault;$('#weekends').checked=!!state.w;renderList();compute();}
+window.addEventListener('hashchange',load);
+document.addEventListener('visibilitychange',function(){if(!document.hidden)compute();});
+load();
+})();
+</script>
+</body>
+</html>

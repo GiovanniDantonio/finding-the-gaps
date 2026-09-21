@@ -1,0 +1,11 @@
+{
+  "text": "14",
+  "reasoning": "Read the full text of the bioRxiv preprint (10.64898/2026.09.07.749876v1). The last paragraph of the Introduction states: \"We profiled 698,631 cells across 15 libraries, 14 of which passed quality control, spanning non-pregnant control, late gestation (E16.5), and postpartum days 1, 7, and 30.\"",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/f342e9ba65214468a6b84cf3a3f96ee8",
+  "problem": "p07",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "In the bioRxiv preprint \"Mapping Uterine Remodeling from Pregnancy to a New Homeostatic State\" (posted 14 September 2026), 15 single-cell libraries were prepared. How many of them passed quality control? Give the number only.\n\nIf the paper reports the value, put it in the answer field exactly as printed and nothing else. If the paper does not report it, put exactly: not reported. In the reasoning field say where in the paper you found it, or, if you did not read the paper, say so plainly.\n",
+  "ts": "2026-09-21T23:21:04.865667+00:00"
+}

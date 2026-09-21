@@ -1,0 +1,11 @@
+{
+  "text": "not reported",
+  "reasoning": "I read the full text of the preprint on bioRxiv (https://www.biorxiv.org/content/10.64898/2026.09.03.747935v1.full, ~100k characters) and searched it for 'Down syndrome', 'DSAD', and 'trisomy'. There are only two mentions: (1) in the Introduction, Down syndrome-associated AD is listed as a future cohort type to be incorporated into harmonized atlases; (2) in the Methods (dataset collection/diagnostic harmonization), donors with 'AD with Down syndrome' were simply relabeled 'AD' along with other dementia-spectrum diagnoses. No per-diagnosis nuclei count for DSAD donors is given anywhere in the main text; sample-level details are deferred to Supplementary Table 1, which is not part of the paper text.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/746a0ddd0f2041558f1e4e7397b34096",
+  "problem": "p12",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "In the bioRxiv preprint \"An Integrated Single-Nucleus Atlas Resolves Cell-Type-Specific Programs and Molecular Subtypes in Alzheimer's Disease\" (posted 4 September 2026), how many nuclei in the panAD atlas come from donors with Down syndrome-associated Alzheimer's disease?\n\nIf the paper reports the value, put it in the answer field exactly as printed and nothing else. If the paper does not report it, put exactly: not reported. In the reasoning field say where in the paper you found it, or, if you did not read the paper, say so plainly.\n",
+  "ts": "2026-09-21T23:21:04.866278+00:00"
+}

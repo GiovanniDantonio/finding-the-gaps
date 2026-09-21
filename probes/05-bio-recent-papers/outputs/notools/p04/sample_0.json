@@ -7,5 +7,5 @@
   "model": "notools",
   "sample": 0,
   "prompt": "In the same HIV-1 RNA-LNP preprint (bioRxiv, posted 19 September 2026), weekly 30 ug RNA-LNP doses were compared against weekly injections of the antibody as protein. What protein dose in ug were they compared against? Give the number only.\n\nAnswer with the exact value as printed in the paper, and nothing else, in the answer field. In the reasoning field, say where you got it (which part of the paper, or, if you did not read the paper, say so plainly and say how confident you are).\n",
-  "ts": "2026-09-21T23:11:35.244125+00:00"
+  "ts": "2026-09-21T23:15:21.037321+00:00"
 }

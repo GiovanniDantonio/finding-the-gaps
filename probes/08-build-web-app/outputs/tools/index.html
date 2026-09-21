@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Overlap – meeting times across time zones</title>
+<style>
+:root{--bg:#f4f6f9;--fg:#1a1d21;--muted:#5b6470;--line:#d5dbe3;--accent:#2457d6;--card:#fff;--alt:#eef2fb;--err:#c0392b}
+@media (prefers-color-scheme:dark){:root{--bg:#121417;--fg:#e8eaed;--muted:#9aa3ad;--line:#2c323a;--accent:#7aa2ff;--card:#1b1f24;--alt:#1f2632;--err:#ff7b6b}}
+*{box-sizing:border-box}
+body{margin:0;font:16px/1.4 system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--fg)}
+main{max-width:1000px;margin:0 auto;padding:16px}
+h1{font-size:1.5rem;margin:0 0 4px}
+h2{font-size:1.05rem;margin:18px 0 6px}
+.lead,.note,.muted{color:var(--muted)}
+.lead{margin:0 0 16px}
+.note{font-size:.85rem;margin:6px 0 0}
+fieldset{border:1px solid var(--line);border-radius:8px;background:var(--card);padding:12px;margin:0 0 12px;min-width:0}
+legend{font-weight:600;padding:0 4px}
+.row{display:grid;grid-template-columns:1.2fr 1.6fr 6.5em 6.5em auto;gap:8px;align-items:end;padding:8px 0;border-bottom:1px solid var(--line)}
+.row:last-of-type{border-bottom:0}
+label{display:flex;flex-direction:column;font-size:.8rem;color:var(--muted);gap:2px;min-width:0}
+input,button{font:inherit;padding:6px 8px;border:1px solid var(--line);border-radius:6px;background:var(--card);color:var(--fg);min-height:38px;min-width:0;width:100%}
+input:focus-visible,button:focus-visible{outline:3px solid var(--accent);outline-offset:1px}
+button{cursor:pointer;width:auto}
+button.primary{background:var(--accent);color:#fff;border-color:var(--accent)}
+.err{color:var(--err);font-size:.8rem;grid-column:1/-1;margin:0}
+.toolbar{display:flex;gap:8px;flex-wrap:wrap;align-items:end;margin-top:10px}
+.toolbar label{flex:1 1 220px}
+.wrap{overflow-x:auto;border:1px solid var(--line);border-radius:8px;background:var(--card)}
+table{width:100%;border-collapse:collapse;font-variant-numeric:tabular-nums}
+th,td{padding:6px 10px;text-align:left;border-bottom:1px solid var(--line);white-space:nowrap;vertical-align:top}
+th{background:var(--bg);font-weight:600;font-size:.85rem;position:sticky;top:0}
+tbody tr:nth-child(even){background:var(--alt)}
+tbody tr:last-child td{border-bottom:0}
+.small{display:block;font-size:.75rem;color:var(--muted)}
+.count{font-weight:600}
+@media (max-width:640px){.row{grid-template-columns:1fr 1fr}.row button{grid-column:1/-1}th,td{padding:5px 6px;font-size:.9rem}}
+</style>
+</head>
+<body>
+<main>
+<h1>Overlap</h1>
+<p class="lead">Find 30-minute slots in the next 7 days when everyone is inside their working hours.</p>
+
+<form id="form" novalidate>
+<fieldset>
+<legend>Participants</legend>
+<div id="people"></div>
+<div class="toolbar">
+<button type="button" id="add" class="primary">Add participant</button>
+</div>
+<p class="note">Time zone: start typing a city (for example <code>Asia/Kolkata</code>) and pick from the list. Working hours are in the participant's own local time; an end before the start means a shift that crosses midnight.</p>
+</fieldset>
+
+<fieldset>
+<legend>Viewer</legend>
+<div class="toolbar">
+<label>Show results in time zone
+<input id="viewer" list="zones" autocomplete="off" spellcheck="false">
+</label>
+<button type="button" id="resetViewer">Use my browser zone</button>
+</div>
+<p class="err" id="viewerErr" role="alert"></p>
+</fieldset>
+</form>
+
+<datalist id="zones"></datalist>
+
+<section aria-live="polite" id="results"></section>
+</main>
+
+<script>
+(function(){
+'use strict';
+var $=function(s){return document.querySelector(s)};
+var SLOT=30*60*1000, DAYS=7;
+var BROWSER_TZ=(Intl.DateTimeFormat().resolvedOptions().timeZone)||'UTC';
+var ZONES=(function(){try{return Intl.supportedValuesOf('timeZone')}catch(e){return ['UTC','America/New_York','America/Chicago','America/Denver','America/Los_Angeles','America/Sao_Paulo','Europe/London','Europe/Berlin','Europe/Rome','Africa/Lagos','Asia/Kolkata','Asia/Singapore','Asia/Tokyo','Australia/Sydney','Pacific/Auckland']}})();
+
+var dl=$('#zones');
+ZONES.forEach(function(z){var o=document.createElement('option');o.value=z;dl.appendChild(o)});
+
+function validTz(tz){if(!tz)return false;try{new Intl.DateTimeFormat('en-US',{timeZone:tz});return true}catch(e){return false}}
+var fmtCache={};
+function fmt(tz){return fmtCache[tz]||(fmtCache[tz]=new Intl.DateTimeFormat('en-US',{timeZone:tz,hourCycle:'h23',hour:'2-digit',minute:'2-digit',weekday:'short',month:'short',day:'numeric',timeZoneName:'short'}))}
+function pad(n){return (n<10?'0':'')+n}
+function local(tz,date){
+  var o={};fmt(tz).formatToParts(date).forEach(function(p){o[p.type]=p.value});
+  var h=(+o.hour)%24, m=+o.minute;
+  return {min:h*60+m,time:pad(h)+':'+pad(m),day:o.weekday+' '+o.month+' '+o.day,tzn:o.timeZoneName};
+}
+function toMin(s){var p=/^(\d{1,2}):(\d{2})$/.exec(s||'');if(!p)return null;var h=+p[1],m=+p[2];if(h>23||m>59)return null;return h*60+m}
+function inHours(m,p){
+  var s=toMin(p.start),e=toMin(p.end);
+  if(s===null||e===null||s===e)return false;
+  if(s<e)return m>=s&&m+30<=e;
+  return m>=s||m+30<=e;
+}
+
+/* ---- state <-> hash ---- */
+var state={viewer:BROWSER_TZ,people:[]};
+function readHash(){
+  var h=location.hash.replace(/^#/,'');
+  var st={viewer:BROWSER_TZ,people:[]};
+  if(h){
+    var q=new URLSearchParams(h);
+    if(q.get('tz'))st.viewer=q.get('tz');
+    q.getAll('p').forEach(function(v){
+      var f=v.split('|');
+      st.people.push({name:f[0]||'',tz:f[1]||'',start:f[2]||'09:00',end:f[3]||'17:00'});
+    });
+  }
+  if(!st.people.length)st.people.push({name:'',tz:BROWSER_TZ,start:'09:00',end:'17:00'});
+  return st;
+}
+var writing=false;
+function writeHash(){
+  var q=new URLSearchParams();
+  q.set('tz',state.viewer);
+  state.people.forEach(function(p){q.append('p',[p.name,p.tz,p.start,p.end].join('|'))});
+  writing=true;
+  history.replaceState(null,'','#'+q.toString());
+  writing=false;
+}
+
+/* ---- participants UI ---- */
+var peopleEl=$('#people');
+function renderPeople(){
+  peopleEl.innerHTML='';
+  state.people.forEach(function(p,i){
+    var row=document.createElement('div');row.className='row';
+    row.innerHTML=
+      '<label>Name<input data-k="name" placeholder="Person '+(i+1)+'" autocomplete="off"></label>'+
+      '<label>Time zone (city)<input data-k="tz" list="zones" autocomplete="off" spellcheck="false" placeholder="Region/City"></label>'+
+      '<label>Start<input data-k="start" type="time" step="1800"></label>'+
+      '<label>End<input data-k="end" type="time" step="1800"></label>'+
+      '<button type="button" data-remove aria-label="Remove participant '+(i+1)+'">Remove</button>'+
+      '<p class="err" role="alert"></p>';
+    ['name','tz','start','end'].forEach(function(k){row.querySelector('[data-k='+k+']').value=p[k]});
+    row.querySelectorAll('input').forEach(function(inp){
+      inp.addEventListener('input',function(){
+        p[inp.dataset.k]=inp.value.trim?inp.value.trim():inp.value;
+        validateRow(row,p);writeHash();renderResults();
+      });
+    });
+    row.querySelector('[data-remove]').addEventListener('click',function(){
+      state.people.splice(i,1);
+      if(!state.people.length)state.people.push({name:'',tz:BROWSER_TZ,start:'09:00',end:'17:00'});
+      writeHash();renderPeople();renderResults();$('#add').focus();
+    });
+    validateRow(row,p);
+    peopleEl.appendChild(row);
+  });
+}
+function validateRow(row,p){
+  var msgs=[];
+  if(!validTz(p.tz))msgs.push('Unknown time zone "'+p.tz+'". Pick an IANA name such as Europe/London.');
+  if(toMin(p.start)===null||toMin(p.end)===null)msgs.push('Working hours need a start and end time.');
+  else if(toMin(p.start)===toMin(p.end))msgs.push('Start and end are the same.');
+  row.querySelector('.err').textContent=msgs.join(' ');
+  row.querySelector('[data-k=tz]').setAttribute('aria-invalid',validTz(p.tz)?'false':'true');
+}
+$('#add').addEventListener('click',function(){
+  state.people.push({name:'',tz:'',start:'09:00',end:'17:00'});
+  writeHash();renderPeople();renderResults();
+  var rows=peopleEl.querySelectorAll('.row');rows[rows.length-1].querySelector('input').focus();
+});
+
+/* ---- viewer UI ---- */
+var viewerEl=$('#viewer');
+viewerEl.addEventListener('input',function(){state.viewer=viewerEl.value.trim();validateViewer();writeHash();renderResults()});
+$('#resetViewer').addEventListener('click',function(){state.viewer=BROWSER_TZ;viewerEl.value=BROWSER_TZ;validateViewer();writeHash();renderResults()});
+function validateViewer(){
+  var ok=validTz(state.viewer);
+  $('#viewerErr').textContent=ok?'':'Unknown time zone "'+state.viewer+'".';
+  viewerEl.setAttribute('aria-invalid',ok?'false':'true');
+}
+
+/* ---- computation ---- */
+function compute(){
+  var start=Math.ceil(Date.now()/SLOT)*SLOT, out=[];
+  for(var i=0;i<DAYS*48;i++){
+    var t=new Date(start+i*SLOT), ok=true, locs=[];
+    for(var j=0;j<state.people.length;j++){
+      var l=local(state.people[j].tz,t);locs.push(l);
+      if(!inHours(l.min,state.people[j])){ok=false;break}
+    }
+    if(ok)out.push({t:t,locs:locs,v:local(state.viewer,t),vEnd:local(state.viewer,new Date(t.getTime()+SLOT))});
+  }
+  return out;
+}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+
+var resultsEl=$('#results');
+function renderResults(){
+  var bad=state.people.filter(function(p){return !validTz(p.tz)||toMin(p.start)===null||toMin(p.end)===null||toMin(p.start)===toMin(p.end)});
+  if(!validTz(state.viewer)||bad.length){
+    resultsEl.innerHTML='<h2>Results</h2><p class="muted">Fix the highlighted fields to see matching slots.</p>';return;
+  }
+  var slots=compute();
+  var html='<h2>Results <span class="muted">– <span class="count">'+slots.length+'</span> slot'+(slots.length===1?'':'s')+' in the next 7 days, shown in '+esc(state.viewer)+'</span></h2>';
+  if(!slots.length){
+    resultsEl.innerHTML=html+'<p class="muted">No 30-minute slot in the next 7 days fits everyone\'s working hours. Try widening someone\'s hours.</p>';return;
+  }
+  var head='<tr><th scope="col">'+esc(state.viewer)+'<span class="small">viewer</span></th>'+state.people.map(function(p,i){
+    return '<th scope="col">'+esc(p.name||('Person '+(i+1)))+'<span class="small">'+esc(p.tz)+' · '+esc(p.start)+'–'+esc(p.end)+'</span></th>'}).join('')+'</tr>';
+  var byDay={},order=[];
+  slots.forEach(function(s){if(!byDay[s.v.day]){byDay[s.v.day]=[];order.push(s.v.day)}byDay[s.v.day].push(s)});
+  order.forEach(function(day){
+    html+='<h2>'+esc(day)+' <span class="muted">('+byDay[day].length+')</span></h2><div class="wrap"><table><thead>'+head+'</thead><tbody>';
+    byDay[day].forEach(function(s){
+      html+='<tr><td>'+s.v.time+'–'+s.vEnd.time+'<span class="small">'+esc(s.v.tzn)+'</span></td>';
+      s.locs.forEach(function(l){
+        html+='<td>'+l.time+(l.day!==s.v.day?'<span class="small">'+esc(l.day)+'</span>':'')+'<span class="small">'+esc(l.tzn)+'</span></td>';
+      });
+      html+='</tr>';
+    });
+    html+='</tbody></table></div>';
+  });
+  resultsEl.innerHTML=html;
+}
+
+/* ---- boot ---- */
+function boot(){
+  state=readHash();
+  viewerEl.value=state.viewer;validateViewer();
+  renderPeople();renderResults();writeHash();
+}
+window.addEventListener('hashchange',function(){if(!writing)boot()});
+boot();
+setInterval(renderResults,60*1000);
+})();
+</script>
+</body>
+</html>

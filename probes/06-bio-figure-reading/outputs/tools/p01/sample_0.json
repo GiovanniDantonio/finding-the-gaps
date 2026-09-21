@@ -1,0 +1,11 @@
+{
+  "text": "160,891",
+  "reasoning": "Read the full text of the bioRxiv preprint (doi 10.64898/2026.09.11.748700v1, full PDF). In the Results section on matching long-read cells to Tabula Sapiens short-read data (referencing Supp. Fig. 2A), the paper states: \"Of the 197,994 cells from the 58 libraries with a matched short-read library, 160,891 (81.3%) were also detected in the short-read data, corresponding to 79.1% of the full 203,311-cell atlas.\" Printed with a comma separator in the paper; as a plain number: 160891.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/34eb99bb371041579973f553a28c77b3",
+  "problem": "p01",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "In the bioRxiv preprint \"Single-cell splice isoform usage reveals distinct axes of cellular identity and senescence\" (posted 11 September 2026), 197,994 cells came from the 58 libraries that had a matched short-read library. How many of those cells were also recovered in the short-read data? Give the number only, no separators.\n\nIf the paper reports the value, put it in the answer field exactly as printed and nothing else. If the paper does not report it, put exactly: not reported. In the reasoning field say where in the paper you found it, or, if you did not read the paper, say so plainly.\n",
+  "ts": "2026-09-21T23:15:21.369066+00:00"
+}

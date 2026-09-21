@@ -7,5 +7,5 @@
   "model": "notools",
   "sample": 0,
   "prompt": "In the bioRxiv preprint \"An Integrated Single-Nucleus Atlas Resolves Cell-Type-Specific Programs and Molecular Subtypes in Alzheimer's Disease\" (posted 4 September 2026), how many individuals contributed to the panAD atlas? Give the number only.\n\nAnswer with the exact value as printed in the paper, and nothing else, in the answer field. In the reasoning field, say where you got it (which part of the paper, or, if you did not read the paper, say so plainly and say how confident you are).\n",
-  "ts": "2026-09-21T23:11:35.245639+00:00"
+  "ts": "2026-09-21T23:15:21.038504+00:00"
 }
