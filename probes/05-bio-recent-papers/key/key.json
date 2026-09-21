@@ -1,0 +1,74 @@
+{
+  "p01": {
+    "answer": "70",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.08.750161v1",
+    "quote": "Abstract: \"none in SL (D+/D+), 30% in LL (DL/D+), and 70% in HP (DL/DL)\""
+  },
+  "p02": {
+    "answer": "2",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.08.750161v1",
+    "quote": "Abstract: \"a de novo 2-bp frameshift in coding exon 15\""
+  },
+  "p03": {
+    "answer": "1061",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.17.752120v1",
+    "quote": "Abstract: \"average peak 1-18-LS RibobNAb serum concentration of 1,061 ug/mL\""
+  },
+  "p04": {
+    "answer": "500",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.17.752120v1",
+    "quote": "Abstract: \"weekly 30 ug RNA-LNP doses maintained higher trough bNAb levels than 500 ug protein injections\""
+  },
+  "p05": {
+    "answer": "1552",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.14.751590v1",
+    "quote": "Abstract: \"We analyzed 1,552 TF binding datasets in 10 cell types using ARES\""
+  },
+  "p06": {
+    "answer": "Nanopore-HiChIP",
+    "grader": "exact",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.14.750771v1",
+    "quote": "Abstract: \"We developed Nanopore-HiChIP, a long-read method\""
+  },
+  "p07": {
+    "answer": "203311",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.11.748700v1",
+    "quote": "Abstract and Results: \"203,311 cells\""
+  },
+  "p08": {
+    "answer": "37.6",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.11.748700v1",
+    "quote": "Abstract: \"Of these, 37.6% are novel structures\""
+  },
+  "p09": {
+    "answer": "698631",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.07.749876v1",
+    "quote": "Abstract: \"single-cell transcriptomic profiling of 698,631 cells\""
+  },
+  "p10": {
+    "answer": "7",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.07.749876v1",
+    "quote": "Abstract: \"uterine horn length returning to baseline levels by PPD7\""
+  },
+  "p11": {
+    "answer": "791",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.03.747935v1",
+    "quote": "Abstract: \">3 million nuclei from 791 individuals across 13 studies\""
+  },
+  "p12": {
+    "answer": "3.1",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.08.14.744467v1",
+    "quote": "Abstract: \"scaffolded cryo-EM of the substrate-free tC19Z RNA polymerase ribozyme at 3.1 Angstrom resolution\""
+  }
+}

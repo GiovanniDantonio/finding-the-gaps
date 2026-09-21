@@ -1,0 +1,37 @@
+Lean grading report — probes/04-math-lean
+Grader: probes/04-math-lean/key/grade_lean.py
+Project: /home/ubuntu/mathlib-ftg (Lean 4.35.0-rc2, mathlib4 @ 0653561 / v4.35.0-rc2)
+Date: run via `lake env lean` inside the project; each item compiled as FTG_<p>_<mode>.lean + `#print axioms`.
+PASS = statement present verbatim, no sorry, compiles, and theorem depends only on {propext, Classical.choice, Quot.sound}.
+
+Items graded: 23 (p08/tools still running — not present yet)
+
+p01  notools  PASS
+p02  notools  FAIL  FTG_p02_notools.lean:4:9: error(lean.unknownIdentifier): Unknown identifier `even_or_odd`
+p03  notools  PASS
+p04  notools  PASS
+p05  notools  PASS
+p06  notools  PASS
+p07  notools  PASS
+p08  notools  PASS
+p09  notools  PASS
+p10  notools  PASS
+p11  notools  PASS
+p12  notools  PASS
+p01  tools    PASS
+p02  tools    PASS
+p03  tools    FAIL  FTG_p03_tools.lean:35:19: error(lean.invalidField): Invalid field `mul_dvd`: The environment does not contain `Eq.mul_dvd`, so it is not possible to project the field `mul_dvd` from an expression `hcop` of type `Nat.gcd 2 3 = 1`
+p04  tools    PASS
+p05  tools    FAIL  FTG_p05_tools.lean:11:6: error: linarith failed to find a contradiction
+p06  tools    PASS
+p07  tools    PASS
+p09  tools    PASS
+p10  tools    PASS
+p11  tools    PASS
+p12  tools    PASS
+
+Summary: 20 PASS / 3 FAIL.
+
+Flags:
+- No item used `sorry`, `admit`, `native_decide`, or an extra `axiom` (all compiling items depended only on propext, Classical.choice, Quot.sound; the failed p03/tools compile reported sorryAx only as a byproduct of the erroring proof).
+- No item silently altered the theorem statement — every output contains the key statement verbatim.

@@ -1,0 +1,11 @@
+{
+  "text": "70",
+  "reasoning": "From the abstract of the bioRxiv preprint (10.64898/2026.09.08.750161v1, full-text PDF lines 29-30): \"Hippocampal RNA-seq shows dose-dependent Scn8a mRNA reduction: none in SL (D+/D+), ~30% in LL (DL/D+), and ~70% in HP (DL/DL).\" The hindlimb-paralysis (HP, DL/DL) value is ~70%. High confidence; read directly from the paper's abstract/full text.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/13db19aeb676463c96d15f755b47095c",
+  "problem": "p01",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "In the bioRxiv preprint \"A De Novo, Intragenic Modifier in Cis Rescues Scn8a-N1768D Epilepsy and Defines a Therapeutic Window Bounded by Gain- and Loss-of-Function\" (posted 13 September 2026), hippocampal RNA-seq showed a dose-dependent reduction in Scn8a mRNA. What percentage reduction was seen in the hindlimb-paralysis (DL/DL) mice? Give the number of percent only.\n\nAnswer with the exact value as printed in the paper, and nothing else, in the answer field. In the reasoning field, say where you got it (which part of the paper, or, if you did not read the paper, say so plainly and say how confident you are).\n",
+  "ts": "2026-09-21T23:11:35.243200+00:00"
+}

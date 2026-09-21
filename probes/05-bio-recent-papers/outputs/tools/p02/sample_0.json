@@ -1,0 +1,11 @@
+{
+  "text": "2",
+  "reasoning": "From the abstract of the bioRxiv preprint \"A De Novo, Intragenic Modifier in Cis Rescues Scn8a-N1768D Epilepsy and Defines a Therapeutic Window Bounded by Gain- and Loss-of-Function\" (Bahramnejad, Hiller, Hammer; posted 13 Sep 2026): \"Long-read trio DNA sequencing identifies a de novo 2-bp frameshift in coding exon 15 of Scn8a, in cis with N1768D.\" Confirmed in both the abstract page and the full PDF text. High confidence.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/829ef87ee5de463d94cbf4fb6a8f6acc",
+  "problem": "p02",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "In the same Scn8a-N1768D modifier preprint (bioRxiv, posted 13 September 2026), long-read trio DNA sequencing identified a de novo frameshift variant in coding exon 15 of Scn8a. How many base pairs is that frameshift? Give the number only.\n\nAnswer with the exact value as printed in the paper, and nothing else, in the answer field. In the reasoning field, say where you got it (which part of the paper, or, if you did not read the paper, say so plainly and say how confident you are).\n",
+  "ts": "2026-09-21T23:11:35.243549+00:00"
+}

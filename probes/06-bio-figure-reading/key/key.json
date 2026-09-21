@@ -1,0 +1,74 @@
+{
+  "p01": {
+    "answer": "160891",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.11.748700v1.full",
+    "quote": "Results: \"Of the 197,994 cells from the 58 libraries with a matched short-read library, 160,891 (81.3%) were also\" recovered"
+  },
+  "p02": {
+    "answer": "0.81",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.11.748700v1.full",
+    "quote": "Results: \"a mean Pearson correlation of 0.81 across donors (range 0.71-0.89)\""
+  },
+  "p03": {
+    "answer": "34",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.11.748700v1.full",
+    "quote": "Results: \"144 precisely defined cell types grouped into 34 broad cell classes\""
+  },
+  "p04": {
+    "answer": "0.945",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.11.748700v1.full",
+    "quote": "Results: \"two replicate long-read libraries prepared from the same tissue agreed at r = 0.945 and rho = 0.894\""
+  },
+  "p05": {
+    "answer": "not reported",
+    "grader": "exact",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.11.748700v1.full",
+    "quote": "Only Pearson (0.81) and Spearman (0.82) are reported. No Kendall tau appears in the paper. Trap item."
+  },
+  "p06": {
+    "answer": "55.3",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.07.749876v1.full",
+    "quote": "Results and Fig. 1b: \"peaking at 55.3 mm at E16.5\""
+  },
+  "p07": {
+    "answer": "14",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.07.749876v1.full",
+    "quote": "Results: \"We profiled 698,631 cells across 15 libraries, 14 of which passed quality control\""
+  },
+  "p08": {
+    "answer": "12.1",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.07.749876v1.full",
+    "quote": "Fig. 1b legend: \"PPD90 12.1 (1.4, 4)\""
+  },
+  "p09": {
+    "answer": "not reported",
+    "grader": "exact",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.07.749876v1.full",
+    "quote": "Horn length is reported for CONTROL, E16.5, PPD1, PPD7, PPD30 and PPD90 only. There is no PPD60 group. Trap item."
+  },
+  "p10": {
+    "answer": "not reported",
+    "grader": "exact",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.07.749876v1.full",
+    "quote": "The study is mouse only; there is no human cohort. Trap item."
+  },
+  "p11": {
+    "answer": "4",
+    "grader": "numeric",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.03.747935v1.full",
+    "quote": "Abstract: \"resolves four subtypes (Metal-Ion Stress, Neuroinflammatory, Synaptic Integrity, and Tissue Remodeling)\""
+  },
+  "p12": {
+    "answer": "not reported",
+    "grader": "exact",
+    "source": "https://www.biorxiv.org/content/10.64898/2026.09.03.747935v1.full",
+    "quote": "Down syndrome-associated AD is named only as a cohort to be added in future work. No such nuclei are in the atlas and no count is reported. Trap item."
+  }
+}

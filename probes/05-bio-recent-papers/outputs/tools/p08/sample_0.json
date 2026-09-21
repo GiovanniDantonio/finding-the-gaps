@@ -1,0 +1,11 @@
+{
+  "text": "37.6",
+  "reasoning": "Read the full text of the preprint on bioRxiv (Mantri et al., 'Single-cell splice isoform usage reveals distinct axes of cellular identity and senescence', doi 10.64898/2026.09.11.748700v1). The Introduction's final paragraph states: '...854,410 robustly detected transcript structures. Of these, 37.6% are novel structures...'. High confidence.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/c249a76bad0944e888ca3f44bb364e4d",
+  "problem": "p08",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "In the same single-cell isoform atlas preprint (bioRxiv, posted 11 September 2026), what percentage of the robustly detected transcript structures were novel? Give the number of percent only.\n\nAnswer with the exact value as printed in the paper, and nothing else, in the answer field. In the reasoning field, say where you got it (which part of the paper, or, if you did not read the paper, say so plainly and say how confident you are).\n",
+  "ts": "2026-09-21T23:11:35.244813+00:00"
+}

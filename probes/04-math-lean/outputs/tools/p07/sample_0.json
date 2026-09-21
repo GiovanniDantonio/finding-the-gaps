@@ -1,0 +1,11 @@
+{
+  "text": "import Mathlib\n\ntheorem p07 (n : \u2115) (h : 3 \u2264 n) : 2 * n < 2 ^ n := by\n  induction n, h using Nat.le_induction with\n  | base => norm_num\n  | succ k hk ih =>\n    rw [pow_succ]\n    omega",
+  "reasoning": "Proof by induction from n = 3 using Nat.le_induction: base case 6 < 8 by norm_num; inductive step rewrites 2^(k+1) = 2^k * 2 and closes 2*(k+1) < 2^k*2 from ih (2*k < 2^k, with k \u2265 3) via omega. Compiled: yes \u2014 installed elan, cloned Mathlib master (commit 9f7aa3a, lean-toolchain leanprover/lean4:v4.35.0-rc2), ran `lake exe cache get` then `lake env lean P07.lean`; exit code 0 with no errors or warnings, no sorry or axioms used.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/7d69079f7c4c4a31bb837dbec0fabc33",
+  "problem": "p07",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "```lean\nimport Mathlib\n\ntheorem p07 (n : \u2115) (h : 3 \u2264 n) : 2 * n < 2 ^ n := by\n  sorry\n```\n\nWrite a complete Lean 4 proof of this statement using Mathlib. Put the whole file, starting with `import Mathlib`, in the answer field and nothing else. Do not change the statement. Do not use `sorry` or any axiom. In the reasoning field, say whether you compiled it and, if so, with which Lean and Mathlib versions.\n",
+  "ts": "2026-09-21T23:09:08.110358+00:00"
+}

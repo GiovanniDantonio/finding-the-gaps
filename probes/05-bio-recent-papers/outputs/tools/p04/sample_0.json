@@ -1,0 +1,11 @@
+{
+  "text": "500",
+  "reasoning": "From the abstract of the bioRxiv preprint \"Durable suppression of viremia by lipid nanoparticle-formulated RNA encoding for a highly potent HIV-1 neutralizing antibody\" (posted 19 September 2026, https://www.biorxiv.org/content/10.64898/2026.09.17.752120v1): \"weekly 30 ug RNA-LNP doses maintained higher trough bNAb levels than 500 ug protein injections.\" High confidence in the number as printed in the abstract; I read the abstract text, not the full body.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/d81c871326a642ad8d1306e28f7af1f9",
+  "problem": "p04",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "In the same HIV-1 RNA-LNP preprint (bioRxiv, posted 19 September 2026), weekly 30 ug RNA-LNP doses were compared against weekly injections of the antibody as protein. What protein dose in ug were they compared against? Give the number only.\n\nAnswer with the exact value as printed in the paper, and nothing else, in the answer field. In the reasoning field, say where you got it (which part of the paper, or, if you did not read the paper, say so plainly and say how confident you are).\n",
+  "ts": "2026-09-21T23:11:35.244007+00:00"
+}

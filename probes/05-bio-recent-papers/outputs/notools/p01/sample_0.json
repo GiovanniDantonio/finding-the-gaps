@@ -1,0 +1,11 @@
+{
+  "text": "50%",
+  "reasoning": "I did not read the paper; this is a memory-only estimate with low confidence.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/c219b283cae6465fac020fff25c78571",
+  "problem": "p01",
+  "model": "notools",
+  "sample": 0,
+  "prompt": "In the bioRxiv preprint \"A De Novo, Intragenic Modifier in Cis Rescues Scn8a-N1768D Epilepsy and Defines a Therapeutic Window Bounded by Gain- and Loss-of-Function\" (posted 13 September 2026), hippocampal RNA-seq showed a dose-dependent reduction in Scn8a mRNA. What percentage reduction was seen in the hindlimb-paralysis (DL/DL) mice? Give the number of percent only.\n\nAnswer with the exact value as printed in the paper, and nothing else, in the answer field. In the reasoning field, say where you got it (which part of the paper, or, if you did not read the paper, say so plainly and say how confident you are).\n",
+  "ts": "2026-09-21T23:11:35.243426+00:00"
+}

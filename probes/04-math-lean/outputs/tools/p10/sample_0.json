@@ -1,0 +1,11 @@
+{
+  "text": "import Mathlib\n\ntheorem p10 (a b : \u2124) : Even (a ^ 2 + b ^ 2) \u2194 Even (a + b) := by\n  rw [Int.even_add', Int.even_add']\n  rw [Int.odd_pow' (m := a) (n := 2) (by norm_num),\n    Int.odd_pow' (m := b) (n := 2) (by norm_num)]",
+  "reasoning": "I did not compile this proof because no Lean toolchain or Mathlib checkout is available in the environment. The proof uses Mathlib's Int.even_add' and Int.odd_pow' lemmas.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/71f7f1a60a47489ea413dc0b394f63c6",
+  "problem": "p10",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "```lean\nimport Mathlib\n\ntheorem p10 (a b : \u2124) : Even (a ^ 2 + b ^ 2) \u2194 Even (a + b) := by\n  sorry\n```\n\nWrite a complete Lean 4 proof of this statement using Mathlib. Put the whole file, starting with `import Mathlib`, in the answer field and nothing else. Do not change the statement. Do not use `sorry` or any axiom. In the reasoning field, say whether you compiled it and, if so, with which Lean and Mathlib versions.\n",
+  "ts": "2026-09-21T23:09:08.110846+00:00"
+}

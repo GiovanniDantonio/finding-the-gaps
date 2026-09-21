@@ -1,0 +1,11 @@
+{
+  "text": "import Mathlib\n\ntheorem p11 (n : \u2115) : n ^ 2 % 4 = 0 \u2228 n ^ 2 % 4 = 1 := by\n  have hlt : n % 4 < 4 := Nat.mod_lt n (by omega)\n  have h : n % 4 = 0 \u2228 n % 4 = 1 \u2228 n % 4 = 2 \u2228 n % 4 = 3 := by\n    omega\n  rcases h with h | h | h | h <;> simp [Nat.pow_mod, h]",
+  "reasoning": "I did not compile this proof; no Lean or Mathlib version was used.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/12dd859bf79f4fccbda94df6bc9b94a1",
+  "problem": "p11",
+  "model": "notools",
+  "sample": 0,
+  "prompt": "```lean\nimport Mathlib\n\ntheorem p11 (n : \u2115) : n ^ 2 % 4 = 0 \u2228 n ^ 2 % 4 = 1 := by\n  sorry\n```\n\nWrite a complete Lean 4 proof of this statement using Mathlib. Put the whole file, starting with `import Mathlib`, in the answer field and nothing else. Do not change the statement. Do not use `sorry` or any axiom. In the reasoning field, say whether you compiled it and, if so, with which Lean and Mathlib versions.\n",
+  "ts": "2026-09-21T23:09:08.111128+00:00"
+}

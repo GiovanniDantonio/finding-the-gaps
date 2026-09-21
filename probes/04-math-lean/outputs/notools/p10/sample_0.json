@@ -1,0 +1,11 @@
+{
+  "text": "import Mathlib\n\ntheorem p10 (a b : \u2124) : Even (a ^ 2 + b ^ 2) \u2194 Even (a + b) := by\n  rw [Int.even_add, Int.even_add, Int.even_pow' two_ne_zero, Int.even_pow' two_ne_zero]",
+  "reasoning": "Not compiled \u2014 answered from reasoning alone as instructed, so no Lean/Mathlib version. Int.even_add rewrites Even (x + y) to (Even x \u2194 Even y) on both sides; Int.even_pow' (n \u2260 0) rewrites Even (a ^ 2) to Even a and Even (b ^ 2) to Even b, leaving (Even a \u2194 Even b) \u2194 (Even a \u2194 Even b), closed by rw's rfl.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/0cd1863344a4411fa64d9d0a6e610c4e",
+  "problem": "p10",
+  "model": "notools",
+  "sample": 0,
+  "prompt": "```lean\nimport Mathlib\n\ntheorem p10 (a b : \u2124) : Even (a ^ 2 + b ^ 2) \u2194 Even (a + b) := by\n  sorry\n```\n\nWrite a complete Lean 4 proof of this statement using Mathlib. Put the whole file, starting with `import Mathlib`, in the answer field and nothing else. Do not change the statement. Do not use `sorry` or any axiom. In the reasoning field, say whether you compiled it and, if so, with which Lean and Mathlib versions.\n",
+  "ts": "2026-09-21T23:09:08.110938+00:00"
+}

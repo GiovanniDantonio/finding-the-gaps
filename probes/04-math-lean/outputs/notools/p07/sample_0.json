@@ -1,0 +1,11 @@
+{
+  "text": "import Mathlib\n\ntheorem p07 (n : \u2115) (h : 3 \u2264 n) : 2 * n < 2 ^ n := by\n  induction n, h using Nat.le_induction with\n  | base => norm_num\n  | succ k hk ih =>\n    rw [pow_succ]\n    omega",
+  "reasoning": "Not compiled (instructed to answer from reasoning alone, no tools). Proof: induction from n = 3 via Nat.le_induction. Base case 2*3 = 6 < 8 = 2^3 by norm_num. Step: goal 2*(k+1) < 2^(k+1); rewrite pow_succ to 2^k * 2; with ih : 2*k < 2^k and hk : 3 \u2264 k, omega (treating 2^k as an atom) closes it since 2k+2 < 2*(2k+1) \u2264 2*2^k when k \u2265 1.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/c32e2a6b918f4a868e5a84cea66d926a",
+  "problem": "p07",
+  "model": "notools",
+  "sample": 0,
+  "prompt": "```lean\nimport Mathlib\n\ntheorem p07 (n : \u2115) (h : 3 \u2264 n) : 2 * n < 2 ^ n := by\n  sorry\n```\n\nWrite a complete Lean 4 proof of this statement using Mathlib. Put the whole file, starting with `import Mathlib`, in the answer field and nothing else. Do not change the statement. Do not use `sorry` or any axiom. In the reasoning field, say whether you compiled it and, if so, with which Lean and Mathlib versions.\n",
+  "ts": "2026-09-21T23:09:08.110458+00:00"
+}

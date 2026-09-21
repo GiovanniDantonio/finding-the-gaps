@@ -1,0 +1,11 @@
+{
+  "text": "import Mathlib\n\ntheorem p12 (f : \u2115 \u2192 \u2115) (hf : StrictMono f) (n : \u2115) : n \u2264 f n := by\n  induction n with\n  | zero => exact Nat.zero_le _\n  | succ n ih =>\n      have hmono : f n < f (Nat.succ n) := hf (Nat.lt_succ_self n)\n      exact Nat.succ_le_of_lt (lt_of_le_of_lt ih hmono)",
+  "reasoning": "I could not compile it because this environment does not have Lean or Mathlib installed.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/f35913880e364a4ead52cbc03d79cf45",
+  "problem": "p12",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "```lean\nimport Mathlib\n\ntheorem p12 (f : \u2115 \u2192 \u2115) (hf : StrictMono f) (n : \u2115) : n \u2264 f n := by\n  sorry\n```\n\nWrite a complete Lean 4 proof of this statement using Mathlib. Put the whole file, starting with `import Mathlib`, in the answer field and nothing else. Do not change the statement. Do not use `sorry` or any axiom. In the reasoning field, say whether you compiled it and, if so, with which Lean and Mathlib versions.\n",
+  "ts": "2026-09-21T23:09:08.111214+00:00"
+}
