@@ -1,0 +1,11 @@
+{
+  "text": "42",
+  "reasoning": "By Tur\u00e1n's theorem, a triangle-free graph on 13 vertices has at most the edges of the balanced complete bipartite graph. Splitting the vertices into parts of sizes 6 and 7 and joining every vertex across the parts gives K\u2086,\u2087, which has 6\u00b77 = 42 edges and contains no triangle. Thus the maximum is 42.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/779408b0b7d4432292f8f4097be9a01e",
+  "problem": "p10",
+  "model": "notools",
+  "sample": 0,
+  "prompt": "What is the maximum number of edges in a simple graph on 13 vertices that contains no triangle? Give a graph that achieves it.\n\nGive the final answer as a single integer, and nothing else, in the answer field. Explain how you got it in the reasoning field, including an explicit construction that achieves the value where one is asked for.\n",
+  "ts": "2026-09-21T22:58:09.904990+00:00"
+}

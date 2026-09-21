@@ -8,7 +8,7 @@ Not a benchmark. Six to eight small experiments, each 10 to 25 hand-written prob
 
 | Probe | Title | Area | Status |
 |---|---|---|---|
-| [01-math-constructions](probes/01-math-constructions) | Math: long constructions | math | 12 problems written, not yet run |
+| [01-math-constructions](probes/01-math-constructions) | Math: long constructions | math | run once, 24/24 numbers right, 1 bad construction |
 | [02-math-casework](probes/02-math-casework) | Math: heavy casework | math | not started |
 | [03-math-false-claims](probes/03-math-false-claims) | Math: prove-this claims that are actually false | math | not started |
 | [04-math-lean](probes/04-math-lean) | Math: statements to be checked in Lean 4 | math | not started |

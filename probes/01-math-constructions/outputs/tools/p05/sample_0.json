@@ -1,0 +1,11 @@
+{
+  "text": "352",
+  "reasoning": "Counted all placements of 9 mutually non-attacking queens on a 9x9 board by exhaustive backtracking: place one queen per row, choosing a column not already used and not sharing either diagonal (row-col or row+col) with a previously placed queen. The search enumerates every valid arrangement without quotienting by symmetry and yields 352, matching the known 9-queens count (OEIS A000170). Example solution (column index for rows 1..9, 1-based): 1,3,6,8,2,4,9,7,5.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/2b9099ac2d4f424f93b39238e873516f",
+  "problem": "p05",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "How many ways are there to place 9 queens on a 9 by 9 chessboard so that no two attack each other? Count every arrangement separately (do not identify arrangements related by symmetry).\n\nGive the final answer as a single integer, and nothing else, in the answer field. Explain how you got it in the reasoning field, including an explicit construction that achieves the value where one is asked for.\n",
+  "ts": "2026-09-21T22:58:09.904236+00:00"
+}

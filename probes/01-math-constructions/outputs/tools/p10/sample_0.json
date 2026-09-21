@@ -1,0 +1,11 @@
+{
+  "text": "42",
+  "reasoning": "By Mantel's theorem, every triangle-free simple graph on n vertices has at most floor(n^2/4) edges. For n=13, this is floor(169/4)=42. Equality is achieved by the complete bipartite graph K_{6,7}: partition the 13 vertices into sets of sizes 6 and 7, include every edge between the sets, and no edges within either set. It has 6\u00b77=42 edges and is triangle-free because every bipartite graph contains no odd cycle, in particular no triangle.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/4b0295a3c3a04f83b4079167badfa971",
+  "problem": "p10",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "What is the maximum number of edges in a simple graph on 13 vertices that contains no triangle? Give a graph that achieves it.\n\nGive the final answer as a single integer, and nothing else, in the answer field. Explain how you got it in the reasoning field, including an explicit construction that achieves the value where one is asked for.\n",
+  "ts": "2026-09-21T22:58:09.904917+00:00"
+}
