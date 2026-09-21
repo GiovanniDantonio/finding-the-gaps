@@ -1,0 +1,50 @@
+{
+  "p01": {
+    "answer": "FALSE",
+    "grader": "exact"
+  },
+  "p02": {
+    "answer": "FALSE",
+    "grader": "exact"
+  },
+  "p03": {
+    "answer": "FALSE",
+    "grader": "exact"
+  },
+  "p04": {
+    "answer": "FALSE",
+    "grader": "exact"
+  },
+  "p05": {
+    "answer": "FALSE",
+    "grader": "exact"
+  },
+  "p06": {
+    "answer": "TRUE",
+    "grader": "exact"
+  },
+  "p07": {
+    "answer": "TRUE",
+    "grader": "exact"
+  },
+  "p08": {
+    "answer": "TRUE",
+    "grader": "exact"
+  },
+  "p09": {
+    "answer": "FALSE",
+    "grader": "exact"
+  },
+  "p10": {
+    "answer": "TRUE",
+    "grader": "exact"
+  },
+  "p11": {
+    "answer": "TRUE",
+    "grader": "exact"
+  },
+  "p12": {
+    "answer": "TRUE",
+    "grader": "exact"
+  }
+}

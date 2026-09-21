@@ -1,0 +1,50 @@
+{
+  "p01": {
+    "answer": "3545",
+    "grader": "numeric"
+  },
+  "p02": {
+    "answer": "35127",
+    "grader": "numeric"
+  },
+  "p03": {
+    "answer": "48800",
+    "grader": "numeric"
+  },
+  "p04": {
+    "answer": "504",
+    "grader": "numeric"
+  },
+  "p05": {
+    "answer": "68",
+    "grader": "numeric"
+  },
+  "p06": {
+    "answer": "4374",
+    "grader": "numeric"
+  },
+  "p07": {
+    "answer": "251",
+    "grader": "numeric"
+  },
+  "p08": {
+    "answer": "11880",
+    "grader": "numeric"
+  },
+  "p09": {
+    "answer": "120",
+    "grader": "numeric"
+  },
+  "p10": {
+    "answer": "1554",
+    "grader": "numeric"
+  },
+  "p11": {
+    "answer": "8064",
+    "grader": "numeric"
+  },
+  "p12": {
+    "answer": "722",
+    "grader": "numeric"
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "text": "TRUE",
+  "reasoning": "Divide the closed unit square into four closed subsquares, each of side length 1/2. By the pigeonhole principle, among 5 points, two lie in the same subsquare. The maximum distance between two points in one subsquare is its diagonal, sqrt((1/2)^2+(1/2)^2)=sqrt(2)/2. Therefore, some pair is at distance at most sqrt(2)/2.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/92cdc54263ce4b9cae7668988cc59128",
+  "problem": "p12",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "Claim: among any 5 points inside or on a closed unit square, some two of them are at distance at most sqrt(2)/2.\n\nDecide whether the claim is true or false. Put exactly the word TRUE or the word FALSE in the answer field and nothing else. In the reasoning field give a proof if it is true, or an explicit counterexample with the arithmetic shown if it is false.\n",
+  "ts": "2026-09-21T23:04:54.624173+00:00"
+}

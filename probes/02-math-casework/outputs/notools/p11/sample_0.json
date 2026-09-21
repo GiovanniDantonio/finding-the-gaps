@@ -1,0 +1,11 @@
+{
+  "text": "8064",
+  "reasoning": "Let N_k = number of seatings in which a specified set of k couples are all adjacent (others unrestricted) = 2^k (8-k)!: N_2 = 4*720 = 2880, N_3 = 8*120 = 960, N_4 = 16*24 = 384.\n\nCase split on which 2 couples are the adjacent ones: C(4,2) = 6 choices, symmetric. For a fixed pair of couples {A,B}, count seatings with A,B adjacent and the other two couples C,D NOT adjacent, by inclusion-exclusion over C and D:\n- A,B adjacent (no restriction on C,D): N_2 = 2880\n- subtract A,B,C adjacent: 960; subtract A,B,D adjacent: 960\n- add back A,B,C,D all adjacent: 384\nPer pair: 2880 - 2*960 + 384 = 1344.\n\nTotal: 6 * 1344 = 8064.\n\nSanity check via full distribution by number of adjacent couples: exactly 4 = 384, exactly 3 = 4*960 - 4*384 = 2304, exactly 2 = 8064, exactly 1 = 4*10080 - 12*2880 + 12*960 - 4*384 = 15744, exactly 0 = 13824; these sum to 40320 = 8!.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/91d51a72a491458aa12b68334f57c829",
+  "problem": "p11",
+  "model": "notools",
+  "sample": 0,
+  "prompt": "Four married couples sit in a row of 8 chairs. How many seatings have exactly two of the four couples sitting in adjacent chairs? People are distinguishable.\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+  "ts": "2026-09-21T23:04:54.077788+00:00"
+}

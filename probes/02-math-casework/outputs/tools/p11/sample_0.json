@@ -1,0 +1,11 @@
+{
+  "text": "8064",
+  "reasoning": "Split by which 2 of the 4 couples are the adjacent ones: C(4,2)=6 choices, symmetric. For a fixed pair (say couples A,B adjacent), glue each into a block: 6 units, 6!*2^2 = 2880 arrangements. Subtract those where couple C is also adjacent: 5!*2^3 = 960; same for couple D: 960. Add back both C and D adjacent: 4!*2^4 = 384. So exactly A,B adjacent (C,D not): 2880 - 1920 + 384 = 1344. Total = 6 * 1344 = 8064. Cross-check via inclusion-exclusion on 'exactly 2': C(4,2)*6!*4 - C(3,2)*C(4,3)*5!*8 + C(4,2)*C(4,4)*4!*16 = 17280 - 11520 + 2304 = 8064. Verified by brute force over all 8! = 40320 seatings.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/c5ab6d90f3f04f2e8195320e14929cf5",
+  "problem": "p11",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "Four married couples sit in a row of 8 chairs. How many seatings have exactly two of the four couples sitting in adjacent chairs? People are distinguishable.\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+  "ts": "2026-09-21T23:04:54.077701+00:00"
+}

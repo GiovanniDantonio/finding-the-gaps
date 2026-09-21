@@ -1,0 +1,11 @@
+{
+  "text": "1554",
+  "reasoning": "Split by the number r of runs of consecutive 1s. Each run has length 1 or 2, and the six 1s give: r=3: 1 run pattern, with C(9,3)=84 zero placements; r=4: C(4,2)=6 run patterns, with C(9,4)=126 zero placements; r=5: C(5,4)=5 run patterns, with C(9,5)=126 zero placements; r=6: 1 run pattern, with C(9,6)=84 zero placements. Total: 1\u00b784+6\u00b7126+5\u00b7126+1\u00b784=1554.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/27e7513e4f6a4b5cae85843f2d41c300",
+  "problem": "p10",
+  "model": "notools",
+  "sample": 0,
+  "prompt": "How many binary strings of length 14 contain exactly six 1s and no three consecutive 1s?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+  "ts": "2026-09-21T23:04:54.077615+00:00"
+}

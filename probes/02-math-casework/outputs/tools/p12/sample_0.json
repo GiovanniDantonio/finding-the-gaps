@@ -1,0 +1,11 @@
+{
+  "text": "722",
+  "reasoning": "Total of {1..15} is 120, so subsets summing to 60 pair up with their complements (size k <-> size 15-k). Counting by subset size k via exhaustive enumeration / DP: k=5: 7; k=6: 91; k=7: 263; k=8: 263; k=9: 91; k=10: 7. (Sizes <=4 max out at 54 < 60 and sizes >=11 have minimum sum 66 > 60, so contribute 0.) Total = 7+91+263+263+91+7 = 722.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/8084df0aa0344e619f05c5846461c9e1",
+  "problem": "p12",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "How many subsets of {1, 2, ..., 15} have elements summing to exactly 60?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+  "ts": "2026-09-21T23:04:54.077884+00:00"
+}

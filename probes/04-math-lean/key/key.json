@@ -1,0 +1,62 @@
+{
+  "p01": {
+    "answer": "theorem p01 (a b : ℕ) : a * (b + 1) = a * b + a",
+    "grader": "lean",
+    "difficulty": "easy"
+  },
+  "p02": {
+    "answer": "theorem p02 (n : ℕ) : 2 ∣ n * (n + 1)",
+    "grader": "lean",
+    "difficulty": "easy"
+  },
+  "p03": {
+    "answer": "theorem p03 (n : ℕ) : 6 ∣ n * (n + 1) * (n + 2)",
+    "grader": "lean",
+    "difficulty": "medium"
+  },
+  "p04": {
+    "answer": "theorem p04 (n : ℕ) : ∑ i ∈ Finset.range (n + 1), (i : ℕ) = n * (n + 1) / 2",
+    "grader": "lean",
+    "difficulty": "medium"
+  },
+  "p05": {
+    "answer": "theorem p05 : ¬ ∃ q : ℚ, q * q = 2",
+    "grader": "lean",
+    "difficulty": "medium"
+  },
+  "p06": {
+    "answer": "theorem p06 (x y : ℝ) : x * y ≤ (x ^ 2 + y ^ 2) / 2",
+    "grader": "lean",
+    "difficulty": "easy"
+  },
+  "p07": {
+    "answer": "theorem p07 (n : ℕ) (h : 3 ≤ n) : 2 * n < 2 ^ n",
+    "grader": "lean",
+    "difficulty": "medium"
+  },
+  "p08": {
+    "answer": "theorem p08 : ∀ N : ℕ, ∃ p, N < p ∧ Nat.Prime p",
+    "grader": "lean",
+    "difficulty": "easy with Mathlib, hard from scratch"
+  },
+  "p09": {
+    "answer": "theorem p09 (n : ℕ) : 7 ∣ 8 ^ n - 1",
+    "grader": "lean",
+    "difficulty": "medium"
+  },
+  "p10": {
+    "answer": "theorem p10 (a b : ℤ) : Even (a ^ 2 + b ^ 2) ↔ Even (a + b)",
+    "grader": "lean",
+    "difficulty": "medium"
+  },
+  "p11": {
+    "answer": "theorem p11 (n : ℕ) : n ^ 2 % 4 = 0 ∨ n ^ 2 % 4 = 1",
+    "grader": "lean",
+    "difficulty": "easy"
+  },
+  "p12": {
+    "answer": "theorem p12 (f : ℕ → ℕ) (hf : StrictMono f) (n : ℕ) : n ≤ f n",
+    "grader": "lean",
+    "difficulty": "medium"
+  }
+}

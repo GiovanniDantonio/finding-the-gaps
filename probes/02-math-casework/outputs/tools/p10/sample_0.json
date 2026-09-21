@@ -1,0 +1,11 @@
+{
+  "text": "1554",
+  "reasoning": "Six 1s with no three consecutive form blocks of size 1 or 2, separated by at least one of the eight 0s. Let k = number of blocks (k from 3 to 6); the k blocks are placed in distinct gaps among the 9 gaps created by the eight 0s, giving C(9,k) placements, and C(k, 6-k) ways to choose which blocks have size 2. Cases: k=3 (three 2-blocks): 1*C(9,3)=84. k=4 (two 2-blocks, two 1-blocks): C(4,2)*C(9,4)=6*126=756. k=5 (one 2-block, four 1-blocks): C(5,1)*C(9,5)=5*126=630. k=6 (six 1-blocks): 1*C(9,6)=84. Total = 84+756+630+84 = 1554. Verified by brute-force enumeration of all C(14,6) strings.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/f1e6a33c49834ea0bade5d34fe09caad",
+  "problem": "p10",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "How many binary strings of length 14 contain exactly six 1s and no three consecutive 1s?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+  "ts": "2026-09-21T23:04:54.077527+00:00"
+}

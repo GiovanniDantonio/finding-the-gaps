@@ -1,0 +1,11 @@
+{
+  "text": "68",
+  "reasoning": "Count partitions of 30 into 4 parts 0<=a<=b<=c<=d<=12. Split on the largest part d (d>=8 needed since 4d>=30; d<=12).\n\nd=12: a+b+c=18, c<=12. By c: c=12: a+b=6 -> 4; c=11: a+b=7 -> 4; c=10: a+b=8 -> 5; c=9: a+b=9 -> 5; c=8: a+b=10, b<=8 -> 4; c=7: a+b=11, b<=7 -> 2; c=6: a+b=12, b<=6 -> 1. Total 25.\n\nd=11: a+b+c=19, c<=11. c=11: a+b=8 -> 5; c=10: a+b=9 -> 5; c=9: a+b=10, b<=9 -> 5; c=8: a+b=11, b<=8 -> 3; c=7: a+b=12, b<=7 -> 2. Total 20.\n\nd=10: a+b+c=20, c<=10. c=10: a+b=10 -> 6; c=9: a+b=11, b<=9 -> 4; c=8: a+b=12, b<=8 -> 3; c=7: a+b=13, b<=7 -> 1. Total 14.\n\nd=9: a+b+c=21, c<=9. c=9: a+b=12, b<=9 -> 4; c=8: a+b=13, b<=8 -> 2; c=7: a+b=14, b<=7 -> 1. Total 7.\n\nd=8: a+b+c=22, c<=8. c=8: a+b=14, b<=8 -> 2; c=7: a+b=15, b<=7 -> 0. Total 2.\n\nd<=7: impossible (max sum 28).\n\nSum: 25+20+14+7+2 = 68.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/8674cec585c8468093578000140351b9",
+  "problem": "p05",
+  "model": "notools",
+  "sample": 0,
+  "prompt": "How many quadruples of integers (a, b, c, d) satisfy 0 <= a <= b <= c <= d <= 12 and a + b + c + d = 30?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+  "ts": "2026-09-21T23:04:54.076710+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "text": "FALSE",
+  "reasoning": "341 is composite: 341=11\u00b731. Modulo 11, 2^10=1024\u22611, so 2^341=2^(10\u00b734+1)\u22612. Modulo 31, 2^5=32\u22611, so 2^341=2^(5\u00b768+1)\u22612. Hence 11 and 31 both divide 2^341\u22122, and since they are coprime, 341 divides 2^341\u22122.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/d616ec985889421d935b37b5e8f9e00b",
+  "problem": "p04",
+  "model": "notools",
+  "sample": 0,
+  "prompt": "Claim: if a positive integer n > 1 divides 2^n - 2, then n is prime.\n\nDecide whether the claim is true or false. Put exactly the word TRUE or the word FALSE in the answer field and nothing else. In the reasoning field give a proof if it is true, or an explicit counterexample with the arithmetic shown if it is false.\n",
+  "ts": "2026-09-21T23:04:54.622874+00:00"
+}

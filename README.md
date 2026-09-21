@@ -9,7 +9,7 @@ Not a benchmark. Six to eight small experiments, each 10 to 25 hand-written prob
 | Probe | Title | Area | Status |
 |---|---|---|---|
 | [01-math-constructions](probes/01-math-constructions) | Math: long constructions | math | run once, 24/24 numbers right, 1 bad construction |
-| [02-math-casework](probes/02-math-casework) | Math: heavy casework | math | not started |
+| [02-math-casework](probes/02-math-casework) | Math: heavy casework | math | run once, 23/24, one dropped factor |
 | [03-math-false-claims](probes/03-math-false-claims) | Math: prove-this claims that are actually false | math | not started |
 | [04-math-lean](probes/04-math-lean) | Math: statements to be checked in Lean 4 | math | not started |
 | [05-bio-recent-papers](probes/05-bio-recent-papers) | Biology: questions from post-cutoff open access papers | biology | not started |

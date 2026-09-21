@@ -1,0 +1,11 @@
+{
+  "text": "35127",
+  "reasoning": "1,000,000 has digit sum 1, so count 6-digit strings d1..d6 (0-9 each) summing to 20 (leading zeros cover shorter numbers). Stars and bars with inclusion-exclusion on the cap of 9: Case 0 (no digit >= 10): C(25,5) = 53130 unrestricted solutions. Case 1 (subtract solutions where a chosen digit >= 10): 6 * C(15,5) = 6 * 3003 = 18018. Case 2 (add back solutions where two chosen digits >= 10): C(6,2) * C(5,5) = 15 * 1 = 15. Three digits >= 10 is impossible (sum >= 30). Total = 53130 - 18018 + 15 = 35127. Verified by brute-force enumeration in Python.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/c0f0c8d44cb144929f555997f6557ed0",
+  "problem": "p02",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "How many integers between 1 and 1,000,000 inclusive have digit sum exactly 20?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+  "ts": "2026-09-21T23:04:54.075987+00:00"
+}
