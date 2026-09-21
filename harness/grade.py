@@ -5,9 +5,9 @@ Usage: python harness/grade.py probes/<slug>
 import json, pathlib, sys, collections
 
 def grade(answer: str, text: str, grader: str) -> bool | None:
-    if grader == "exact": return text.strip().splitlines()[-1].strip() == answer.strip()
+    if grader == "exact": return text.strip() == answer.strip()
     if grader == "numeric":
-        try: return abs(float(text.strip().splitlines()[-1]) - float(answer)) < 1e-6
+        try: return abs(float(text.strip()) - float(answer)) < 1e-6
         except ValueError: return False
     return None  # lean / manual: graded by hand, fill results.md directly
 

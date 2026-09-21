@@ -2,7 +2,7 @@
 
 Small probes of where frontier AI models still fail. CS 91r, Harvard, Fall 2026. Supervisor: Christopher Thorpe.
 
-Not a benchmark. Six to eight small experiments, each 10 to 25 hand-written problems or one build task, run against two or three frontier models, written up in one or two pages. The goal is a short, evidence-backed taxonomy of gaps in mathematics, biology, and software building.
+Not a benchmark. Six to eight small experiments, each 10 to 25 hand-written problems or one build task, run as Devin sessions in two modes (with tools, and reasoning only), written up in one or two pages. The goal is a short, evidence-backed taxonomy of gaps in mathematics, biology, and software building.
 
 ## Probes
 
@@ -30,11 +30,11 @@ probes/<slug>/
   writeup.md   one to two pages: hypothesis, setup, what happened, gap or no gap
 ```
 
-`harness/` runs and grades items. `report/` holds the running taxonomy, the week 7 status report, and the final report.
+`harness/` runs and grades items. `run.py` opens one Devin session per (problem, mode, sample) through the Devin API and saves the structured answer plus a link to the session; set `DEVIN_API_KEY` first. `grade.py` scores the saved answers against `key/key.json`. `report/` holds the running taxonomy, the week 7 status report, and the final report.
 
 ## Rules I am holding myself to
 
 - Every problem is written by me, after the models' training cutoffs where that matters.
-- Several samples per problem. Model versions and prompts recorded.
+- Several samples per problem. Mode, prompt, and a link to every session recorded.
 - Raw outputs are committed as is.
 - A probe that finds no gap still gets a writeup.
