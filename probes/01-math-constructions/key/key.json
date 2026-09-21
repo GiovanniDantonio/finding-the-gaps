@@ -1,0 +1,50 @@
+{
+  "p01": {
+    "answer": "25",
+    "grader": "numeric"
+  },
+  "p02": {
+    "answer": "2731",
+    "grader": "numeric"
+  },
+  "p03": {
+    "answer": "15",
+    "grader": "numeric"
+  },
+  "p04": {
+    "answer": "6",
+    "grader": "numeric"
+  },
+  "p05": {
+    "answer": "352",
+    "grader": "numeric"
+  },
+  "p06": {
+    "answer": "10",
+    "grader": "numeric"
+  },
+  "p07": {
+    "answer": "414733676044142633476",
+    "grader": "exact"
+  },
+  "p08": {
+    "answer": "360",
+    "grader": "numeric"
+  },
+  "p09": {
+    "answer": "6",
+    "grader": "numeric"
+  },
+  "p10": {
+    "answer": "42",
+    "grader": "numeric"
+  },
+  "p11": {
+    "answer": "45",
+    "grader": "numeric"
+  },
+  "p12": {
+    "answer": "576",
+    "grader": "numeric"
+  }
+}
