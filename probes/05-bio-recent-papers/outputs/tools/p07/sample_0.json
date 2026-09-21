@@ -1,0 +1,11 @@
+{
+  "text": "203311",
+  "reasoning": "Read the paper's full text (bioRxiv JATS XML for DOI 10.64898/2026.09.11.748700, posted 2026-09-14 on the API; dated 11 Sept in the DOI). Results: 'After quality control filtering, we analysed long-read single-cell transcriptomes for 203,311 cells across 26 tissues and organs'; Methods: 'After filtering, 203,311 cells were retained.' High confidence.",
+  "status": "finished",
+  "session_url": "https://app.devin.ai/sessions/9ae85010ad434a19b21ff2c3e78c92dc",
+  "problem": "p07",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "In the bioRxiv preprint \"Single-cell splice isoform usage reveals distinct axes of cellular identity and senescence\" (posted 11 September 2026), how many cells were analysed after quality control filtering? Give the number only, with no separators.\n\nAnswer with the exact value as printed in the paper, and nothing else, in the answer field. In the reasoning field, say where you got it (which part of the paper, or, if you did not read the paper, say so plainly and say how confident you are).\n",
+  "ts": "2026-09-21T23:51:08.813180+00:00"
+}

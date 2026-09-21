@@ -4,7 +4,7 @@
 
 | Mode | Correct / Answered | Abstained | Total |
 |---|---|---|---|
-| tools | 11 / 11 | 0 | 11 (p07 still running at time of writing) |
+| tools | 12 / 12 | 0 | 12 |
 | notools | 0 / 4 | 8 | 12 |
 
 No-tools answered items: p01 (said 50, paper says 70), p04 (300 vs 500), p09 (100000 vs 698631), p12 (4.4 vs 3.1). Every one of the four reasoning fields says it did not read the paper and is guessing.

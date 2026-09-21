@@ -46,7 +46,7 @@ One sample per item per mode. That is the biggest limit of this report and I ret
 | 02 | Math: heavy casework | 12/12 | 11/12 | small gap, one dropped factor |
 | 03 | Math: false claims | 12/12 | 12/12 | no gap at this difficulty |
 | 04 | Math: Lean 4 proofs | 10/12 compile | 11/12 compile | small gap, 3 of 24 |
-| 05 | Bio: recent papers | 11/11 (1 pending) | 0 correct, 4 guessed, 8 abstained | gap, but in the answer slot |
+| 05 | Bio: recent papers | 12/12 | 0 correct, 4 guessed, 8 abstained | gap, but in the answer slot |
 | 06 | Bio: legends and traps | 12/12 incl. 4 traps | 0 correct, 3 false "not reported", 9 abstained | same gap as 05 |
 | 07 | Software: CLI tool | 18/18 | 18/18 | no gap |
 | 08 | Software: web app | 11/11 checks, deployed | 11/11 checks | no gap |
@@ -79,7 +79,7 @@ The part I did not predict: ten of the twelve tools sessions had no Lean install
 
 ### 3.5 Probe 05: numbers from recent papers
 
-Twelve factual questions from eight bioRxiv preprints posted in the five weeks before the run, so none of them can be in training data. With a browser: 11 of 11, every answer quoting the passage it came from, and I checked those quotes against mine. Without tools: zero correct. Eight said they did not know. Four put a number in the answer field: 50 where the paper says 70, 300 where it says 500, 100000 where it says 698631, 4.4 where it says 3.1. All four reasoning fields say, plainly, that the paper was not read and the number is a guess.
+Twelve factual questions from eight bioRxiv preprints posted in the five weeks before the run, so none of them can be in training data. With a browser: 12 of 12, every answer quoting the passage it came from, and I checked those quotes against mine. Without tools: zero correct. Eight said they did not know. Four put a number in the answer field: 50 where the paper says 70, 300 where it says 500, 100000 where it says 698631, 4.4 where it says 3.1. All four reasoning fields say, plainly, that the paper was not read and the number is a guess.
 
 ### 3.6 Probe 06: legends, methods and traps
 

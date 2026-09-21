@@ -20,7 +20,7 @@ Every math key is recomputed by brute force. Every Lean proof was compiled by me
 | 02 | Math: heavy casework | 12/12 | 11/12 | one dropped factor |
 | 03 | Math: false claims | 12/12 | 12/12 | no gap, claims too famous |
 | 04 | Math: Lean 4 | 10/12 compile | 11/12 compile | 3 of 24, all invented API |
-| 05 | Bio: recent papers | 11/11 | 0 correct, 4 guessed, 8 abstained | gap in the answer field |
+| 05 | Bio: recent papers | 12/12 | 0 correct, 4 guessed, 8 abstained | gap in the answer field |
 | 06 | Bio: legends and traps | 12/12 | 0 correct, 3 false "not reported" | same |
 | 07 | Software: CLI tool | 18/18 | 18/18 | no gap |
 | 08 | Software: web app | 11/11, deployed | 11/11 | no gap |
