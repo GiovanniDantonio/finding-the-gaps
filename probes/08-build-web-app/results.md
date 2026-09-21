@@ -7,4 +7,4 @@ Task in `problems/task.md`, acceptance in `key/acceptance.md`, check-by-check lo
 | tools | 2026-09-21 | 0 | 11 / 11 | 1 (DST) | yes, see below |
 | notools | 2026-09-21 | 0 | 11 / 11 | 1 (DST) | no |
 
-Deployed URL (tools version, unmodified): DEPLOY_URL
+Deployed URL (tools version, unmodified): https://deploy-overlap-jtidkovr.devinapps.com
