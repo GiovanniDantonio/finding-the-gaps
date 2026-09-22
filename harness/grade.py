@@ -4,7 +4,7 @@ Usage: python harness/grade.py probes/<slug>
 """
 import json, pathlib, re, sys, collections
 
-ABSTAIN = re.compile(r"^\s*$|i don'?t know|unknown|not (?:read|have|know)|no (?:idea|memory)|cannot|unable to", re.I)
+ABSTAIN = re.compile(r"^\s*$|i don'?t know|unknown|not (?:read|have|know)|no (?:idea|memory)|cannot|unable to|^\s*abstain\s*$", re.I)
 
 WORDS = {"zero":"0","one":"1","two":"2","three":"3","four":"4","five":"5","six":"6","seven":"7","eight":"8","nine":"9","ten":"10"}
 

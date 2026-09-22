@@ -1,0 +1,11 @@
+{
+  "text": "516788",
+  "reasoning": "Let f(k) = number of k-bit integers (leading 1) with more 1s than 0s. With the leading 1 fixed, among the other k-1 bits we need j ones with 1+j > k-1-j, i.e. j >= floor(k/2).\n- k = 2m+1 odd: f = sum_{j>=m} C(2m,j) = (4^m + C(2m,m))/2.\n- k = 2m+2 even: f = sum_{j>=m+1} C(2m+1,j) = 4^m.\nValues k=1..19: 1,1,3,4,11,16,42,64,163,256,638,1024,2510,4096,9908,16384,39203,65536,155382. Even k sum = (4^9-1)/3 = 87381; odd k sum = 207861; total for all numbers < 2^19: 295242.\n\n20-bit numbers 2^19 <= n <= 1,000,000 = 11110100001001000000_2 (bits set at 19,18,17,16,14,9,6); need >=11 ones. Digit walk along N, branching where N has a 1 by placing a 0 and freeing the remaining bits:\n- bit 18 -> 0 (ones=1, 18 free, need >=10): (2^18 - C(18,9))/2 = 106762\n- bit 17 -> 0 (ones=2, 17 free, need >=9): 2^16 = 65536\n- bit 16 -> 0 (ones=3, 16 free, need >=8): (2^16 + C(16,8))/2 = 39203\n- bit 14 -> 0 (ones=4, 14 free, need >=7): (2^14 + C(14,7))/2 = 9908\n- bit 9 -> 0 (ones=5, 9 free, need >=6): 84+36+9+1 = 130\n- bit 6 -> 0 (ones=6, 6 free, need >=5): 6+1 = 7\n- N itself has 7 ones: not counted.\nSubtotal 20-bit: 221546.\n\nTotal = 295242 + 221546 = 516788.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/0698bf582daa4d5fa15d84dc80b2973e",
+  "problem": "p10",
+  "model": "notools",
+  "sample": 0,
+  "prompt": "How many positive integers n \u2264 1,000,000 have strictly more 1s than 0s in their binary representation (no leading zeros)?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, show the argument, with the cases or the recurrence you used and the intermediate totals.\n",
+  "ts": "2026-09-22T00:22:37.086574+00:00"
+}

@@ -1,0 +1,11 @@
+{
+  "text": "516788",
+  "reasoning": "For a number with binary length L, write it as 1 followed by m=L\u22121 bits. If k of those m bits are 1, the condition is 1+k>(m\u2212k), so k\u2265ceil((L\u22121)/2). For lengths L=1 through 19, the counts are respectively 1, 1, 3, 4, 11, 16, 42, 64, 163, 256, 638, 1024, 2510, 4096, 9908, 16384, 39203, 65536, 155382; their total is 295242. The remaining numbers have length 20 and range from 2^19 through 1,000,000, so their 19-bit suffix is at most 475712 = (1110100001001000000)_2. Counting suffixes \u2264475712 with at least 10 ones gives the prefix-branch totals 106762+65536+39203+9908+130+7=221546. Therefore the total is 295242+221546=516788.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/6504d72441244242963841541f1f1e31",
+  "problem": "p10",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "How many positive integers n \u2264 1,000,000 have strictly more 1s than 0s in their binary representation (no leading zeros)?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, show the argument, with the cases or the recurrence you used and the intermediate totals.\n",
+  "ts": "2026-09-22T00:22:37.086499+00:00"
+}

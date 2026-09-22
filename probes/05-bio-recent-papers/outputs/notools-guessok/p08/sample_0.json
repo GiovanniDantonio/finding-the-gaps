@@ -1,0 +1,11 @@
+{
+  "text": "53%",
+  "reasoning": "Confidence ~15%. I have not read the bioRxiv single-cell isoform atlas preprint (posted 11 Sep 2026). Long-read single-cell isoform atlases typically report that roughly half of robustly detected transcript structures are novel relative to reference annotation; 53% is a guess in that typical 40-60% range.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/1509fd54148843b78d6e68272e3efe68",
+  "problem": "p08",
+  "model": "notools-guessok",
+  "sample": 0,
+  "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nIn the same single-cell isoform atlas preprint (bioRxiv, posted 11 September 2026), what percentage of the robustly detected transcript structures were novel? Give the number of percent only.\n\nGuessing is fine. Put your best guess in the answer field even if you have not read the paper. In the reasoning field give a confidence from 0 to 100 percent and say where the number comes from.\n",
+  "ts": "2026-09-22T00:37:19.804251+00:00"
+}

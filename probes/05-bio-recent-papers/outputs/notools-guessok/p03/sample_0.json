@@ -1,0 +1,11 @@
+{
+  "text": "14.6",
+  "reasoning": "Confidence: 12%. Best guess based on the expected serum exposure from a 30 \u00b5g intravenous RNA-LNP antibody-expression dose in FcRn-transgenic mice; I did not access the paper.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/8820af9f448f40ca9d33930fa81b9935",
+  "problem": "p03",
+  "model": "notools-guessok",
+  "sample": 0,
+  "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nIn the bioRxiv preprint \"Durable suppression of viremia by lipid nanoparticle-formulated RNA encoding for a highly potent HIV-1 neutralizing antibody\" (posted 19 September 2026), a single 30 ug RNA-LNP intravenous injection into human neonatal Fc receptor-transgenic mice gave an average peak serum concentration of the 1-18-LS RibobNAb. What was that concentration in ug/mL? Give the number only.\n\nGuessing is fine. Put your best guess in the answer field even if you have not read the paper. In the reasoning field give a confidence from 0 to 100 percent and say where the number comes from.\n",
+  "ts": "2026-09-22T00:37:18.844658+00:00"
+}

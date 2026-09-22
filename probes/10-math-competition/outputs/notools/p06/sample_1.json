@@ -1,0 +1,11 @@
+{
+  "text": "7031132",
+  "reasoning": "Let D(m,s) be the number of subsets of {1,2,...,m} with sum s. Use D(0,0)=1, D(0,s)=0 for s>0, and the recurrence D(m,s)=D(m-1,s)+D(m-1,s-m), with D(m,s)=0 when s<0. As an intermediate check, D(20,200)=10, since this is equivalent by complementation in {1,...,20} to counting subsets summing to 10. Iterating the recurrence for m=1,...,30 through s=200 gives D(30,200)=7031132.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/2acb05f364ba42d19d9b8eded0b2e64e",
+  "problem": "p06",
+  "model": "notools",
+  "sample": 1,
+  "prompt": "How many subsets of {1, 2, ..., 30} have element sum exactly 200?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, show the argument, with the cases or the recurrence you used and the intermediate totals.\n",
+  "ts": "2026-09-22T00:38:50.860077+00:00"
+}

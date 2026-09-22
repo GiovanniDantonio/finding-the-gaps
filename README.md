@@ -2,7 +2,7 @@
 
 Small probes of where frontier AI models still fail. CS 91r, Harvard, Fall 2026. Supervisor: Christopher Thorpe.
 
-Not a benchmark. Six to eight small experiments, each 10 to 25 hand-written problems or one build task, run as Devin sessions in two modes (with tools, and reasoning only), written up in one or two pages. The goal is a short, evidence-backed taxonomy of gaps in mathematics, biology, and software building.
+Not a benchmark. Ten small experiments, each 10 to 25 hand-written problems or one build task, run as Devin sessions in two modes (with tools, and reasoning only), written up in one or two pages. The goal is a short, evidence-backed taxonomy of gaps in mathematics, biology, and software building.
 
 ## Probes
 
@@ -12,10 +12,12 @@ Not a benchmark. Six to eight small experiments, each 10 to 25 hand-written prob
 | [02-math-casework](probes/02-math-casework) | Math: heavy casework | math | run once, 23/24, one dropped factor |
 | [03-math-false-claims](probes/03-math-false-claims) | Math: prove-this claims that are actually false | math | run once, 24/24, no gap |
 | [04-math-lean](probes/04-math-lean) | Math: statements to be checked in Lean 4 | math | run once, 21/24 compile |
-| [05-bio-recent-papers](probes/05-bio-recent-papers) | Biology: questions from post-cutoff open access papers | biology | run once, tools 12/12, no-tools 0/4 answered, 8 abstained |
+| [05-bio-recent-papers](probes/05-bio-recent-papers) | Biology: questions from post-cutoff open access papers | biology | tools 12/12, no-tools 0/4 answered, 8 abstained; two prompt variants move it to 12 guesses or 12 abstentions |
 | [06-bio-figure-reading](probes/06-bio-figure-reading) | Biology: figure and table reading | biology | run once, tools 12/12 incl. 4 traps, no-tools 0/3 answered |
 | [07-build-cli-tool](probes/07-build-cli-tool) | Software: build a small CLI tool end to end | software | run once, 18/18 both modes, no gap |
 | [08-build-web-app](probes/08-build-web-app) | Software: build and deploy a tiny web app | software | run once, 11/11 both modes, tools build deployed |
+| [09-build-vague-spec](probes/09-build-vague-spec) | Software: four one-sentence specs | software | run once, 22/24 hard checks both modes, same two failures |
+| [10-math-competition](probes/10-math-competition) | Math: competition counting | math | tools 12/12, no-tools 8/12; four misses rerun 3x: two slips, two stable |
 
 ## Layout
 

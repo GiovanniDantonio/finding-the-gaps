@@ -1,3 +1,3 @@
 # Weekly notes
 
-One short note to my supervisor the day before each weekly meeting. Weeks 8 to 12 are drafted with [RESULT] placeholders to be filled once the reruns are done.
+One short note to my supervisor the day before each weekly meeting. Week 11 has two [RESULT] placeholders for reruns that are set up but not yet finished.

@@ -1,0 +1,11 @@
+{
+  "text": "58045",
+  "reasoning": "Order the sides as a\u2264b\u2264c. Let k=1013\u2212c and d=b\u2212a. Then 1\u2264k\u2264337, d\u22650, d\u22611013+k (mod 2), and the triangle conditions give d\u22641013\u22123k. Since a\u00b2+b\u00b2=((1013+k)\u00b2+d\u00b2)/2 and c=1013\u2212k, obtuseness is d\u00b2<Q(k), where Q(k)=k\u00b2\u22126078k+1026169. Because Q(k)<(1013\u22123k)\u00b2 for k>0, the upper triangle bound is automatic whenever d\u00b2<Q(k). Q(k)>0 only for k=1,\u2026,173 (Q(173)=4604 and Q(174)=\u22121127). For each such k, set m_k=\u230a\u221a(Q(k)\u22121)\u230b. The number of admissible d is \u230a(m_k+2\u2212p_k)/2\u230b, where p_k is 0 if 1013+k is even and 1 otherwise. Evaluating this recurrence/accumulation for k=1,\u2026,173 gives the intermediate endpoint values m_1=1009, m_173=67, and total \u03a3\u230a(m_k+2\u2212p_k)/2\u230b=58045.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/cbe9961196d84feaa216339970a8c034",
+  "problem": "p12",
+  "model": "notools",
+  "sample": 0,
+  "prompt": "How many non-congruent triangles have integer side lengths, perimeter 2026, and an obtuse angle?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, show the argument, with the cases or the recurrence you used and the intermediate totals.\n",
+  "ts": "2026-09-22T00:22:37.086897+00:00"
+}

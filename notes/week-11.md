@@ -1,9 +1,11 @@
-# Week 11: Probe 05 prompt variants
+# Week 11: Open items
 
 To: Christopher Thorpe
 
-Two rewordings of the probe 05 prompt without tools. One says guessing is fine, give a confidence number. The other says a wrong answer costs more than no answer.
+Two reruns I have set up but not finished, both aimed at the probes that found nothing.
 
-[RESULT: fill in. The question is whether the four guessers become twelve or zero.]
+Probe 03 with the six false claims rewritten so none of them are famous: weakened hypotheses of true theorems, and a constant moved so the smallest counterexample is above ten thousand. [RESULT: fill in when run]
 
-This is the experiment I most want to talk through, since it is the one with an actual recommendation attached for people building on structured outputs.
+Probe 04 with a prebuilt Mathlib project in the environment so every tools session can compile. The question is whether the three failures disappear and whether any session repairs a proof from the compiler message. [RESULT: fill in when run]
+
+Also folding probes 09 and 10 and the reruns into the final report this week.

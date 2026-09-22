@@ -1,0 +1,11 @@
+{
+  "text": "100",
+  "reasoning": "Answered from reasoning alone, no tools/sources consulted. Confidence ~15%. Prior-based guess: mouse passive-antibody comparator arms commonly use ~100 \u00b5g weekly protein (~5 mg/kg), a typical benchmark against a 30 \u00b5g RNA-LNP dose. I have not read the 19 Sep 2026 bioRxiv HIV-1 RNA-LNP preprint; 200 or 300 \u00b5g are plausible alternatives.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/bb35dddd993c43ed88fb9b82b72f7541",
+  "problem": "p04",
+  "model": "notools-guessok",
+  "sample": 0,
+  "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nIn the same HIV-1 RNA-LNP preprint (bioRxiv, posted 19 September 2026), weekly 30 ug RNA-LNP doses were compared against weekly injections of the antibody as protein. What protein dose in ug were they compared against? Give the number only.\n\nGuessing is fine. Put your best guess in the answer field even if you have not read the paper. In the reasoning field give a confidence from 0 to 100 percent and say where the number comes from.\n",
+  "ts": "2026-09-22T00:37:19.377047+00:00"
+}

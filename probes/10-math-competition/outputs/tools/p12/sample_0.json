@@ -1,0 +1,11 @@
+{
+  "text": "58120",
+  "reasoning": "Write the sides as a \u2264 b \u2264 c with a+b+c = 2026 and triangle inequality a+b > c, i.e. c < 1013, and c \u2265 ceil(2026/3) = 676. So c ranges over 676..1012. For fixed c, set s = 2026 - c = a+b; then a runs from max(1, s-c) to floor(s/2), giving all non-congruent triangles with largest side c. Summing gives the total number of integer triangles with perimeter 2026: 85514 (matches the known formula round(P^2/48) = round(4104676/48) = 85514 for even P).\n\nThe triangle is obtuse iff a^2 + b^2 < c^2. With b = s - a this is 2a^2 - 2sa + (s^2 - c^2) < 0, i.e. a lies strictly between the roots (s \u00b1 sqrt(2c^2 - s^2))/2; since the upper root is \u2265 s/2 \u2265 a, the condition is simply a > (s - sqrt(2c^2 - s^2))/2 (when 2c^2 \u2265 s^2; otherwise every a works). Counting, for each c from 676 to 1012, the integers a in [max(1, s-c), floor(s/2)] satisfying a^2 + (s-a)^2 < c^2, and summing over c (done by direct enumeration), gives 58120 obtuse triangles.\n\nSanity checks: the same enumeration gives 0 right triangles with perimeter 2026 (so the acute/obtuse split is clean: 85514 total = 58120 obtuse + 27394 acute + 0 right). Answer: 58120.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/1732773d584a49a8afac785273807a47",
+  "problem": "p12",
+  "model": "tools",
+  "sample": 0,
+  "prompt": "How many non-congruent triangles have integer side lengths, perimeter 2026, and an obtuse angle?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, show the argument, with the cases or the recurrence you used and the intermediate totals.\n",
+  "ts": "2026-09-22T00:22:37.086818+00:00"
+}

@@ -1,0 +1,50 @@
+{
+  "p01": {
+    "answer": "102093",
+    "grader": "exact"
+  },
+  "p02": {
+    "answer": "626",
+    "grader": "exact"
+  },
+  "p03": {
+    "answer": "136800",
+    "grader": "exact"
+  },
+  "p04": {
+    "answer": "32032",
+    "grader": "exact"
+  },
+  "p05": {
+    "answer": "526",
+    "grader": "exact"
+  },
+  "p06": {
+    "answer": "7026242",
+    "grader": "exact"
+  },
+  "p07": {
+    "answer": "6",
+    "grader": "exact"
+  },
+  "p08": {
+    "answer": "1998",
+    "grader": "exact"
+  },
+  "p09": {
+    "answer": "60",
+    "grader": "exact"
+  },
+  "p10": {
+    "answer": "516788",
+    "grader": "exact"
+  },
+  "p11": {
+    "answer": "9",
+    "grader": "exact"
+  },
+  "p12": {
+    "answer": "58120",
+    "grader": "exact"
+  }
+}

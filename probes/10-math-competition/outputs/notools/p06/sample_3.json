@@ -1,0 +1,11 @@
+{
+  "text": "7026242",
+  "reasoning": "Split {1..30} into A={1..15} and B={16..30}. A B-subset of size a with sum s corresponds to an A-subset of size a with sum s-15a, and an A-subset of size a with sum s' corresponds to a partition of s'-a(a+1)/2 into at most a parts each <=15-a, i.e. the coefficient G_a(j) of q^j in the Gaussian binomial [15 choose a]_q. Computed G_a for a=1..7 (G_8=G_7, G_9=G_6, G_10=G_5) from p(n,<=k parts) tables with corrections for parts exceeding 15-a; each checked against sum = C(15,a): 15,105,455,1365,3003,5005,6435. Middle values e.g. G_5(20..25)=121,127,134,137,141,141; G_6(20..27)=169,182,196,205,217,221,227,227; G_7(20..28)=197,214,233,247,263,272,282,285,289.\n\nSubset-sum distribution of A: f(t)=sum_a G_a(t-a(a+1)/2), symmetric f(t)=f(120-t); e.g. f(0..10)=1,1,1,2,2,3,4,5,6,8,10; f(20)=57, f(30)=186, f(40)=401, f(50)=624, f(60)=722; checked sum_{t=0}^{59} f = 16023 = (32768-722)/2.\n\nAnswer = sum_a sum_j G_a(j) f(200 - a(a+31)/2 - j), a=3..9 (a<=2 gives B-sum <=59 so A-sum >120; a>=10 gives B-sum >=205). Per-size totals:\nT_3 = 49, T_4 = 39183, T_5 = 909292, T_6 = 3262245, T_7 = 2459942, T_8 = 350960, T_9 = 4571.\nTotal = 49+39183+909292+3262245+2459942+350960+4571 = 7026242.\n\nSanity: normal approximation (mean 232.5, sd 48.6, 2^30 total) gives ~7.05e6, consistent.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/2a17b8cebf274d88a040ca7ba4b29027",
+  "problem": "p06",
+  "model": "notools",
+  "sample": 3,
+  "prompt": "How many subsets of {1, 2, ..., 30} have element sum exactly 200?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, show the argument, with the cases or the recurrence you used and the intermediate totals.\n",
+  "ts": "2026-09-22T00:50:55.362547+00:00"
+}

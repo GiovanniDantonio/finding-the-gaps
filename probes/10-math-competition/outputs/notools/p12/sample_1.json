@@ -1,0 +1,11 @@
+{
+  "text": "58120",
+  "reasoning": "Let sides a \u2264 b \u2264 c, a+b+c = 2026, so a+b = s = 2026\u2212c and c \u2264 1012. No right triangles exist (a Pythagorean perimeter 2k\u00b7m(m+n) = 2026 would need m(m+n) | 1013, prime \u2014 impossible), so 'obtuse' = a\u00b2+b\u00b2 < c\u00b2.\n\nWrite k = b\u2212a \u2265 0 with k \u2261 c (mod 2) (since k \u2261 s \u2261 c). Then a\u00b2+b\u00b2 = (s\u00b2+k\u00b2)/2, so obtuse \u21d4 k\u00b2 < 2c\u00b2 \u2212 s\u00b2 = (c+2026)\u00b2 \u2212 2\u00b72026\u00b2 =: D(u), u = c+2026, 2\u00b72026\u00b2 = 8,209,352. D(u) > 0 needs c \u2265 840 (u \u2265 2866). The bound b < c and a \u2265 1 are automatic (b = c gives k\u00b2 = D + 2(c\u2212s)\u00b2 > D). So\n\nCount = \u03a3_{u=2866}^{3038} f(u), where r(u) = max{k : k\u00b2 < D(u)}, f = \u230ar/2\u230b+1 if u even (k even), f = \u230a(r+1)/2\u230b if u odd (k odd).\n\nRecurrence: D(2866) = 4604, D(u+1) = D(u) + 2u + 1. Sample values (u: D, r, f): 2866: 4604, 67, 34; 2867: 10337, 101, 51; 2868: 16072, 126, 64; 2869: 21809, 147, 74; 2870: 27548, 165, 83; \u2026; 2900: 200648, 447, 224; 2950: 493148, 702, 352; 3000: 790648, 889, 445; 3020: 911048, 954, 478; 3036: 1007944, 1003, 502; 3037: 1014017, 1006, 503; 3038: 1020092, 1009, 505.\n\nBlock sums of f over 10 consecutive u (starting 2866): 834, 1479, 1907, 2256, 2558, 2829, 3078, 3307, 3523, 3728, 3922, 4107, 4285, 4457, 4622, 4783, 4935, and the final 3 terms (3036\u20133038) 502+503+505 = 1510.\n\nRunning totals: 834, 2313, 4220, 6476, 9034, 11863, 14941, 18248, 21771, 25499, 29421, 33528, 37813, 42270, 46892, 51675, 56610, 58120.\n\nSanity check: total triangles with perimeter 2026 = round(2026\u00b2/48) = 85514; 58120/85514 \u2248 0.680, matching the continuous limit 9 \u2212 12 ln 2 \u2248 0.682.\n\nAnswer: 58120.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/5875c3cfd69e44969c93cce823ac74f0",
+  "problem": "p12",
+  "model": "notools",
+  "sample": 1,
+  "prompt": "How many non-congruent triangles have integer side lengths, perimeter 2026, and an obtuse angle?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, show the argument, with the cases or the recurrence you used and the intermediate totals.\n",
+  "ts": "2026-09-22T00:43:40.038561+00:00"
+}

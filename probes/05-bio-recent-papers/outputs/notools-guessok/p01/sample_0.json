@@ -1,0 +1,11 @@
+{
+  "text": "50",
+  "reasoning": "Confidence ~10%. I have not read this preprint (dated Sept 2026) and did not use any tools. The number is an inference: a dose-dependent Scn8a mRNA reduction with a heterozygous intermediate and a homozygous (DL/DL) severe-phenotype group most commonly reads as roughly ~25% vs ~50%, so 50% is my best guess for the DL/DL hindlimb-paralysis mice.",
+  "status": "waiting_for_user",
+  "session_url": "https://app.devin.ai/sessions/7075b5faaf8b483abe74be0fff2913f9",
+  "problem": "p01",
+  "model": "notools-guessok",
+  "sample": 0,
+  "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nIn the bioRxiv preprint \"A De Novo, Intragenic Modifier in Cis Rescues Scn8a-N1768D Epilepsy and Defines a Therapeutic Window Bounded by Gain- and Loss-of-Function\" (posted 13 September 2026), hippocampal RNA-seq showed a dose-dependent reduction in Scn8a mRNA. What percentage reduction was seen in the hindlimb-paralysis (DL/DL) mice? Give the number of percent only.\n\nGuessing is fine. Put your best guess in the answer field even if you have not read the paper. In the reasoning field give a confidence from 0 to 100 percent and say where the number comes from.\n",
+  "ts": "2026-09-22T00:37:19.185329+00:00"
+}
