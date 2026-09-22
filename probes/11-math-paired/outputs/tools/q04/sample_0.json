@@ -1,0 +1,11 @@
+{
+ "text": "11",
+ "reasoning": "A partition has either 1 or 2 parts, since 3 distinct parts each at least 20 would sum to at least 20+21+22=63. There is 1 one-part partition: 60. For two distinct parts a<b with a,b≥20 and a+b=60, a can be 20 through 29, giving 10 partitions. Total: 1+10=11.\nEXACT",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/572ded535e884a14891dbf34150a70e4",
+ "problem": "q04",
+ "model": "tools",
+ "sample": 0,
+ "prompt": "How many partitions of 60 into distinct positive parts, each part at least 20, are there?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, show how you got it. End the reasoning with one line that says exactly one of: EXACT (you carried out the full computation), RECALLED (you remembered the value), or ESTIMATED (you approximated or guessed).\n",
+ "ts": "2026-09-22T06:28:54.414372+00:00"
+}

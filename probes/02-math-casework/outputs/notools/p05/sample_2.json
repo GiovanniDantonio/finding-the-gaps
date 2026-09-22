@@ -1,0 +1,11 @@
+{
+ "text": "68",
+ "reasoning": "Since 4d >= 30, d ranges over 8..12. For each d, count triples 0<=a<=b<=c<=d with a+b+c = 30-d.\n\nd=12: a+b+c=18, c<=12. Partitions of 18 into at most 3 parts = 37; subtract those with largest part >=13 (c=13..18 give 3+3+2+2+1+1 = 12) -> 25.\nd=11: a+b+c=19, c<=11. Partitions of 19 into at most 3 parts = 40; subtract c>=12 (c=12..19 give 4+4+3+3+2+2+1+1 = 20) -> 20.\nd=10: a+b+c=20, c<=10. Partitions of 20 into at most 3 parts = 44; subtract c>=11 (c=11..20 give 5+5+4+4+3+3+2+2+1+1 = 30) -> 14.\nd=9: a+b+c=21, c<=9: c=9 -> a+b=12 with b<=9: (3,9),(4,8),(5,7),(6,6) = 4; c=8 -> a+b=13, b<=8: (5,8),(6,7) = 2; c=7 -> a+b=14, b<=7: (7,7) = 1. Total 7.\nd=8: a+b+c=22, c<=8: c=8 -> a+b=14, b<=8: (6,8),(7,7) = 2; c=7 -> a+b=15 impossible. Total 2.\n\nSum: 25+20+14+7+2 = 68.\n\nCross-check via complement (a',b',c',d') = (12-d,12-c,12-b,12-a), sum 18: partitions of 18 into at most 4 parts = 84, minus those with a part >=13 (13..18 give 5+4+3+2+1+1 = 16) = 68.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/b3481573ae614510b54cdc5efa557ee0",
+ "problem": "p05",
+ "model": "notools",
+ "sample": 2,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nHow many quadruples of integers (a, b, c, d) satisfy 0 <= a <= b <= c <= d <= 12 and a + b + c + d = 30?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+ "ts": "2026-09-22T06:18:30.318129+00:00"
+}

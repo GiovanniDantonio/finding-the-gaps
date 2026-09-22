@@ -1,0 +1,11 @@
+{
+ "text": "63",
+ "reasoning": "Split by d, the largest entry. For each fixed d, count nondecreasing triples (a,b,c) with a+b+c=30-d and c≤d. The counts are:\n- d=12: 25 triples.\n- d=11: 20 triples.\n- d=10: 14 triples.\n- d=9: 3 triples, namely (6,7,8), (5,8,8), (7,7,7).\n- d=8: 1 triple, namely (7,7,8).\nNo d<8 is possible because 4d<30. Thus the total is 25+20+14+3+1=63.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/36c108acc40c4426865f303dd5c4b39a",
+ "problem": "p05",
+ "model": "notools-lite",
+ "sample": 0,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nHow many quadruples of integers (a, b, c, d) satisfy 0 <= a <= b <= c <= d <= 12 and a + b + c + d = 30?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+ "ts": "2026-09-22T06:29:47.292883+00:00"
+}

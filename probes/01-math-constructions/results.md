@@ -11,3 +11,7 @@ Constructions were checked by hand (with a short script) for p01, p04, p06, p09,
 
 Run: `python harness/run.py probes/01-math-constructions --modes tools,notools --samples 3`
 Grade: `python harness/grade.py probes/01-math-constructions`
+
+## Three more no-tools samples (2026-09-22)
+
+Same prompt, same mode, `sample_1` to `sample_3` for all twelve problems. 48 no-tools answers in total, 48 correct on the final integer. Constructions in the new samples were not hand-checked; the sample 0 finding (right integer, invalid construction on p06) is the only construction-level check so far. This probe is at the ceiling for final answers in both modes and any further work should go into checking the constructions mechanically.

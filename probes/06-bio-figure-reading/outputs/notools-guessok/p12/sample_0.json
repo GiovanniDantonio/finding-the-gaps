@@ -1,0 +1,11 @@
+{
+ "text": "100,000",
+ "reasoning": "I have not read this paper; it was posted in September 2026, after my knowledge cutoff, and I was instructed not to use tools. The answer is a pure guess based on typical sizes of Down syndrome AD snRNA-seq datasets (e.g., Palmer et al. 2021, Miyoshi et al. 2024, tens of thousands to ~100k nuclei). Confidence: ~5%.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/7f6f4dd6a8254c46a534b500976bad80",
+ "problem": "p12",
+ "model": "notools-guessok",
+ "sample": 0,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nIn the bioRxiv preprint \"An Integrated Single-Nucleus Atlas Resolves Cell-Type-Specific Programs and Molecular Subtypes in Alzheimer's Disease\" (posted 4 September 2026), how many nuclei in the panAD atlas come from donors with Down syndrome-associated Alzheimer's disease?\n\nIf the paper reports the value, put it in the answer field exactly as printed and nothing else. If the paper does not report it, put exactly: not reported. In the reasoning field say where in the paper you found it, or, if you did not read the paper, say so plainly.\n\n\nGuessing is fine. If you have not read the paper, give your best estimate in the answer field anyway, and state a confidence in percent in the reasoning field.\n",
+ "ts": "2026-09-22T06:29:54.462070+00:00"
+}

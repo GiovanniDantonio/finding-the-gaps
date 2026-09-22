@@ -1,0 +1,11 @@
+{
+ "text": "1554",
+ "reasoning": "Let k be the number of maximal blocks of 1s; each block has size 1 or 2 (no three consecutive 1s), and blocks sum to 6, so k ranges 3..6 with (6-k) blocks of size 2 and (2k-6) of size 1: C(k,6-k) orderings. The 8 zeros: k-1 are forced as separators between blocks; the remaining 9-k zeros are distributed freely among k+1 gaps: C(9-k+k, k) = C(9,k). Cases: k=3: C(3,3)*C(9,3)=1*84=84. k=4: C(4,2)*C(9,4)=6*126=756. k=5: C(5,1)*C(9,5)=5*126=630. k=6: C(6,0)*C(9,6)=1*84=84. Total = 84+756+630+84 = 1554.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/46f9fa8c9e8e49bdb2489156043820e4",
+ "problem": "p10",
+ "model": "notools",
+ "sample": 2,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nHow many binary strings of length 14 contain exactly six 1s and no three consecutive 1s?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+ "ts": "2026-09-22T06:18:15.532276+00:00"
+}

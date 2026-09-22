@@ -1,0 +1,11 @@
+{
+ "text": "1554",
+ "reasoning": "Split by the number k of runs of consecutive 1s. Since each run has length 1 or 2 and the total is six 1s, k can be 3, 4, 5, or 6. For fixed k, the run lengths can be arranged in C(k,6-k) ways, and distributing the eight 0s among the k+1 gaps with at least one 0 between adjacent runs gives C(9,k) placements. Cases: k=3: C(3,3)C(9,3)=84; k=4: C(4,2)C(9,4)=756; k=5: C(5,1)C(9,5)=630; k=6: C(6,0)C(9,6)=84. Total = 84+756+630+84 = 1554.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/6ecb485df7ef4bc8890a403435e61d6a",
+ "problem": "p10",
+ "model": "notools",
+ "sample": 1,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nHow many binary strings of length 14 contain exactly six 1s and no three consecutive 1s?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+ "ts": "2026-09-22T06:18:15.532435+00:00"
+}

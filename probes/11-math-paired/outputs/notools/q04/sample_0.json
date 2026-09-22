@@ -1,0 +1,11 @@
+{
+ "text": "11",
+ "reasoning": "Parts must be distinct, each ≥ 20, summing to 60.\n\nk=1 part: {60} → 1 partition.\nk=2 parts a<b with a≥20, a+b=60: need a<30, so a=20,...,29 → 10 partitions.\nk=3 parts: minimum possible sum 20+21+22=63 > 60 → 0.\n\nTotal = 1+10 = 11.\nEXACT",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/17ec5fb2dc3a483380c39f6d1c9ee963",
+ "problem": "q04",
+ "model": "notools",
+ "sample": 0,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nHow many partitions of 60 into distinct positive parts, each part at least 20, are there?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, show how you got it. End the reasoning with one line that says exactly one of: EXACT (you carried out the full computation), RECALLED (you remembered the value), or ESTIMATED (you approximated or guessed).\n",
+ "ts": "2026-09-22T06:28:53.878438+00:00"
+}

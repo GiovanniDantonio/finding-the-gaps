@@ -1,0 +1,506 @@
+[
+ {
+  "problem": "p01",
+  "mode": "notools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p01",
+  "mode": "notools",
+  "sample": "sample_1",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p01",
+  "mode": "notools",
+  "sample": "sample_2",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p01",
+  "mode": "notools",
+  "sample": "sample_3",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p02",
+  "mode": "notools",
+  "sample": "sample_0",
+  "pass": false,
+  "note": "FTG_p02_notools_sample_0.lean:4:9: error(lean.unknownIdentifier): Unknown identifier `even_or_odd`"
+ },
+ {
+  "problem": "p02",
+  "mode": "notools",
+  "sample": "sample_1",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p02",
+  "mode": "notools",
+  "sample": "sample_2",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p02",
+  "mode": "notools",
+  "sample": "sample_3",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p03",
+  "mode": "notools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p03",
+  "mode": "notools",
+  "sample": "sample_1",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p03",
+  "mode": "notools",
+  "sample": "sample_2",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p03",
+  "mode": "notools",
+  "sample": "sample_3",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p04",
+  "mode": "notools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p04",
+  "mode": "notools",
+  "sample": "sample_1",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p04",
+  "mode": "notools",
+  "sample": "sample_2",
+  "pass": false,
+  "note": "FTG_p04_notools_sample_2.lean:4:30: error(lean.unknownIdentifier): Unknown constant `Nat.sum_range_id`"
+ },
+ {
+  "problem": "p04",
+  "mode": "notools",
+  "sample": "sample_3",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p05",
+  "mode": "notools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p05",
+  "mode": "notools",
+  "sample": "sample_1",
+  "pass": false,
+  "note": "FTG_p05_notools_sample_1.lean:8:4: error: linarith failed to find a contradiction"
+ },
+ {
+  "problem": "p05",
+  "mode": "notools",
+  "sample": "sample_2",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p05",
+  "mode": "notools",
+  "sample": "sample_3",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p06",
+  "mode": "notools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p06",
+  "mode": "notools",
+  "sample": "sample_1",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p06",
+  "mode": "notools",
+  "sample": "sample_2",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p06",
+  "mode": "notools",
+  "sample": "sample_3",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p07",
+  "mode": "notools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p07",
+  "mode": "notools",
+  "sample": "sample_1",
+  "pass": false,
+  "note": "FTG_p07_notools_sample_1.lean:9:6: error: linarith failed to find a contradiction"
+ },
+ {
+  "problem": "p07",
+  "mode": "notools",
+  "sample": "sample_2",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p07",
+  "mode": "notools",
+  "sample": "sample_3",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p08",
+  "mode": "notools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p08",
+  "mode": "notools",
+  "sample": "sample_1",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p08",
+  "mode": "notools",
+  "sample": "sample_2",
+  "pass": false,
+  "note": "FTG_p08_notools_sample_2.lean:5:8: error(lean.unknownIdentifier): Unknown constant `Nat.exists_prime_gt`"
+ },
+ {
+  "problem": "p08",
+  "mode": "notools",
+  "sample": "sample_3",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p09",
+  "mode": "notools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p09",
+  "mode": "notools",
+  "sample": "sample_1",
+  "pass": false,
+  "note": "FTG_p09_notools_sample_1.lean:4:12: error(lean.unknownIdentifier): Unknown identifier `nat_sub_dvd_pow_sub_pow`"
+ },
+ {
+  "problem": "p09",
+  "mode": "notools",
+  "sample": "sample_2",
+  "pass": false,
+  "note": "FTG_p09_notools_sample_2.lean:9:34: error: not a positivity goal"
+ },
+ {
+  "problem": "p09",
+  "mode": "notools",
+  "sample": "sample_3",
+  "pass": false,
+  "note": "FTG_p09_notools_sample_3.lean:10:34: error: not a positivity goal"
+ },
+ {
+  "problem": "p10",
+  "mode": "notools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p10",
+  "mode": "notools",
+  "sample": "sample_1",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p10",
+  "mode": "notools",
+  "sample": "sample_2",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p10",
+  "mode": "notools",
+  "sample": "sample_3",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p11",
+  "mode": "notools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p11",
+  "mode": "notools",
+  "sample": "sample_1",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p11",
+  "mode": "notools",
+  "sample": "sample_2",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p11",
+  "mode": "notools",
+  "sample": "sample_3",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p12",
+  "mode": "notools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p12",
+  "mode": "notools",
+  "sample": "sample_1",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p12",
+  "mode": "notools",
+  "sample": "sample_2",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p12",
+  "mode": "notools",
+  "sample": "sample_3",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p01",
+  "mode": "tools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p02",
+  "mode": "tools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p03",
+  "mode": "tools",
+  "sample": "sample_0",
+  "pass": false,
+  "note": "FTG_p03_tools_sample_0.lean:35:19: error(lean.invalidField): Invalid field `mul_dvd`: The environment does not contain `Eq.mul_dvd`, so it is not possible to project the field `mul_dvd` from an expression"
+ },
+ {
+  "problem": "p04",
+  "mode": "tools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p05",
+  "mode": "tools",
+  "sample": "sample_0",
+  "pass": false,
+  "note": "FTG_p05_tools_sample_0.lean:11:6: error: linarith failed to find a contradiction"
+ },
+ {
+  "problem": "p06",
+  "mode": "tools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p07",
+  "mode": "tools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p08",
+  "mode": "tools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p09",
+  "mode": "tools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p10",
+  "mode": "tools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p11",
+  "mode": "tools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p12",
+  "mode": "tools",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p01",
+  "mode": "tools-lean",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p02",
+  "mode": "tools-lean",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p03",
+  "mode": "tools-lean",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p04",
+  "mode": "tools-lean",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p05",
+  "mode": "tools-lean",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p06",
+  "mode": "tools-lean",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p07",
+  "mode": "tools-lean",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p08",
+  "mode": "tools-lean",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p09",
+  "mode": "tools-lean",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p10",
+  "mode": "tools-lean",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p11",
+  "mode": "tools-lean",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ },
+ {
+  "problem": "p12",
+  "mode": "tools-lean",
+  "sample": "sample_0",
+  "pass": true,
+  "note": ""
+ }
+]

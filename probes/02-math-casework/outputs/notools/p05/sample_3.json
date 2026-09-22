@@ -1,0 +1,11 @@
+{
+ "text": "68\n    is_final: True",
+ "reasoning": "Split on d (the largest part), which must satisfy 8 <= d <= 12 since 4d >= 30 and d <= 12. For each d, count a<=b<=c<=d with a+b+c=30-d, enumerating over c.\n\nd=8: a+b+c=22, c<=8 -> (6,8,8),(7,7,8) = 2\nd=9: a+b+c=21, c<=9 -> c=7:1, c=8:2, c=9:4 = 7\nd=10: a+b+c=20, c<=10 -> c=7:1, c=8:3, c=9:4, c=10:6 = 14\nd=11: a+b+c=19, c<=11 -> c=7:2, c=8:3, c=9:5, c=10:5, c=11:5 = 20\nd=12: a+b+c=18, c<=12 -> c=6:1, c=7:2, c=8:4, c=9:5, c=10:5, c=11:4, c=12:4 = 25\n\nTotal = 2+7+14+20+25 = 68.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/a92335942b3042909baf001e535d3dff",
+ "problem": "p05",
+ "model": "notools",
+ "sample": 3,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nHow many quadruples of integers (a, b, c, d) satisfy 0 <= a <= b <= c <= d <= 12 and a + b + c + d = 30?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+ "ts": "2026-09-22T06:18:30.318058+00:00"
+}

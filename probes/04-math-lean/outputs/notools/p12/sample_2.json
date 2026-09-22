@@ -1,0 +1,11 @@
+{
+ "text": "import Mathlib\n\ntheorem p12 (f : ℕ → ℕ) (hf : StrictMono f) (n : ℕ) : n ≤ f n := by\n  induction n with\n  | zero => exact Nat.zero_le _\n  | succ n ih =>\n      exact Nat.succ_le_of_lt (lt_of_le_of_lt ih (hf (Nat.lt_succ_self n)))",
+ "reasoning": "I did not compile this proof, so no Lean or Mathlib version was used.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/848e4a2c2ba84bd6ab88186e57c727c6",
+ "problem": "p12",
+ "model": "notools",
+ "sample": 2,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\n```lean\nimport Mathlib\n\ntheorem p12 (f : ℕ → ℕ) (hf : StrictMono f) (n : ℕ) : n ≤ f n := by\n  sorry\n```\n\nWrite a complete Lean 4 proof of this statement using Mathlib. Put the whole file, starting with `import Mathlib`, in the answer field and nothing else. Do not change the statement. Do not use `sorry` or any axiom. In the reasoning field, say whether you compiled it and, if so, with which Lean and Mathlib versions.\n",
+ "ts": "2026-09-22T06:18:08.360388+00:00"
+}

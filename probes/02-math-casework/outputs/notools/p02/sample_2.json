@@ -1,0 +1,11 @@
+{
+ "text": "35127",
+ "reasoning": "Split by number of digits. For d=1,2 digits the count is 0. For d=3,4,5,6, use inclusion-exclusion after writing the first digit as 1+y: the counts are respectively 36, 597, 4998, and 29496. Thus the total is 0+0+36+597+4998+29496=35127. The number 1,000,000 has digit sum 1, so it is not included.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/b5f243986d4b492d89efd8e0e52cd293",
+ "problem": "p02",
+ "model": "notools",
+ "sample": 2,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nHow many integers between 1 and 1,000,000 inclusive have digit sum exactly 20?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+ "ts": "2026-09-22T06:18:31.308860+00:00"
+}

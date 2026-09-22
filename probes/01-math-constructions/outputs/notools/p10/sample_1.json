@@ -1,0 +1,11 @@
+{
+ "text": "42",
+ "reasoning": "By Turán's theorem, a triangle-free graph on 13 vertices has at most the edges of the balanced complete bipartite graph K6,7: 6·7 = 42. The construction K6,7 is simple and triangle-free, so the maximum is 42.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/3eda06cc2b784d5e8e5134aff51aa2fe",
+ "problem": "p10",
+ "model": "notools",
+ "sample": 1,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nWhat is the maximum number of edges in a simple graph on 13 vertices that contains no triangle? Give a graph that achieves it.\n\nGive the final answer as a single integer, and nothing else, in the answer field. Explain how you got it in the reasoning field, including an explicit construction that achieves the value where one is asked for.\n",
+ "ts": "2026-09-22T06:18:32.279431+00:00"
+}

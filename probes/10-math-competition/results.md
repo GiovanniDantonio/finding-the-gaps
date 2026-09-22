@@ -42,3 +42,27 @@ p06: s1 states D(20,200) = 10 as an intermediate, which is correct, then reports
 p09 and p12: the other three samples each got the right answer with the right argument. The s0 recurrence slip and the s0 sum slip did not recur.
 
 Every tools session wrote a short program. On p01 and p10 there is no other way; on p07, p09 and p11 the program was a check on a hand argument that was already right.
+
+## Three more no-tools samples on all twelve (2026-09-22)
+
+The reruns above covered only the four misses. `sample_1` to `sample_3` now exist for every problem.
+
+| | s0 | s1 | s2 | s3 | correct |
+|---|---|---|---|---|---|
+| p01 (key 102093) | 119811 | 111192 | 96280 | 108231 | 0 / 4 |
+| p02 (key 626) | ok | ok | 617 | ok | 3 / 4 |
+| p05 (key 526) | ok | 524 | 518 | 535 | 1 / 4 |
+| p06 (key 7026242) | 7026324 | 7031132 | 7029274 | ok | 1 / 4 |
+| p09 (key 60) | 144 | ok | ok | ok | 3 / 4 |
+| p12 (key 58120) | 58045 | ok | ok | ok | 3 / 4 |
+| other six | ok | ok | ok | ok | 24 / 24 |
+
+35 of 48 overall; per sample 8, 9, 8, 10. Two problems that were right in the original sample turned out to be unstable: p02 missed once, and p05 (8-digit nondecreasing numbers with digit sum 40) was right only in the original and gave three different wrong totals afterwards, each from a correct reduction (partitions of 32 in an 8 x 8 box) followed by a long recursive breakdown with dozens of small partition counts written out. The breakdowns are shown, and they differ from each other; somewhere in each one a small count is wrong. That is a different failure from p01 and p06, where the arithmetic is not shown at all: here it is shown and slips, the way a person's would over a page of casework.
+
+Majority vote over four samples: right on p02, p09, p12 (and the six that never miss); no majority at all on p01, p05, p06, where the four samples give four different numbers. So the vote fixes the slips and does nothing for the stable misses. p01 and p06 give scattered numbers because the totals are invented; p05 gives scattered numbers because a long shown computation slips in a different place each time. Same signature, different cause, and only reading the reasoning tells them apart.
+
+## Lite tier, no tools, one sample (2026-09-22)
+
+Same no-tools prompt as a Devin Lite session, `outputs/notools-lite/`. 7 of 12. Misses: p01 (105074), p02 (633), p05 (528), p06 (7029544), p12 (42756). The default tier's three stable misses (p01, p05, p06) are all misses here too, and p02 and p12, which the default tier slips on once in four, are missed once here. Every problem the default tier got right on all four samples, Lite got right. p05's 528 is two off the key, the same near-miss shape as the default tier's shown-and-slipped breakdowns; p12's 42756 comes from a recalled formula (floor(N^2/24)) applied to a problem it does not fit. One sample, one tier: a check that the hard problems are the same hard problems, not a ranking.
+
+The first p11 Lite session sat at "working" for 35 minutes with no output and was replaced by an identical session (noted in the record); the replacement answered in a few minutes. Not counted as a model failure, same rule as the default-tier p01 stall.

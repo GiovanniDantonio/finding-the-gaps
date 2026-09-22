@@ -1,0 +1,11 @@
+{
+ "text": "28",
+ "reasoning": "We count representations of n = 1000² = 1,000,000 as a sum of two integer squares. Factor n = 2⁶·5⁶. By the sum-of-two-squares representation formula, r₂(n) = 4∏(e_p+1) over primes p ≡ 1 (mod 4), provided every prime p ≡ 3 (mod 4) has an even exponent. Here the only such prime is 5 ≡ 1 (mod 4), with exponent 6, so r₂(n) = 4(6+1) = 28. EXACT",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/68fb03a5745e48aea161b2d677f00357",
+ "problem": "q12",
+ "model": "tools",
+ "sample": 0,
+ "prompt": "How many lattice points (x, y) with integer coordinates satisfy x² + y² = 1000²?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, show how you got it. End the reasoning with one line that says exactly one of: EXACT (you carried out the full computation), RECALLED (you remembered the value), or ESTIMATED (you approximated or guessed).\n",
+ "ts": "2026-09-22T06:28:39.489785+00:00"
+}

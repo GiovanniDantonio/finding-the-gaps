@@ -1,0 +1,11 @@
+{
+ "text": "8064",
+ "reasoning": "Let A_i = event that couple i sits adjacent. For any fixed set of k couples all adjacent, glue each into a block: N_k = (8-k)! * 2^k. So N_2 = 6!*4 = 2880, N_3 = 5!*8 = 960, N_4 = 4!*16 = 384. Exactly-2 by inclusion-exclusion: C(4,2)*N_2 - C(3,2)*C(4,3)*N_3 + C(4,2)*C(4,4)*N_4 = 6*2880 - 12*960 + 6*384 = 17280 - 11520 + 2304 = 8064. Check by full distribution over number of adjacent couples: exactly 0 = 13824, exactly 1 = 15744, exactly 2 = 8064, exactly 3 = 2304, exactly 4 = 384; sum = 40320 = 8!.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/c662927126d14fa1b258612a6cda0d03",
+ "problem": "p11",
+ "model": "notools",
+ "sample": 1,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nFour married couples sit in a row of 8 chairs. How many seatings have exactly two of the four couples sitting in adjacent chairs? People are distinguishable.\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+ "ts": "2026-09-22T06:18:12.196334+00:00"
+}

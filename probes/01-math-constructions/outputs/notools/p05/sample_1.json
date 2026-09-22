@@ -1,0 +1,11 @@
+{
+ "text": "352\n    is_final: True",
+ "reasoning": "The number of ways to place n non-attacking queens on an n×n board (counting all arrangements, not up to symmetry) is the classic n-queens sequence: 1, 0, 0, 2, 10, 4, 40, 92, 352, 724, ... for n = 1..10. For n = 9 the value is 352. (Up to the 8 board symmetries there are 46 fundamental solutions; 4 of them are symmetric under 180° rotation, giving 42·8 + 4·4 = 352.) An explicit example arrangement (row i -> column): (1,1),(2,3),(3,6),(4,8),(5,2),(6,4),(7,9),(8,7),(9,5).",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/910624a8dcb245409ee58f1607625daa",
+ "problem": "p05",
+ "model": "notools",
+ "sample": 1,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nHow many ways are there to place 9 queens on a 9 by 9 chessboard so that no two attack each other? Count every arrangement separately (do not identify arrangements related by symmetry).\n\nGive the final answer as a single integer, and nothing else, in the answer field. Explain how you got it in the reasoning field, including an explicit construction that achieves the value where one is asked for.\n",
+ "ts": "2026-09-22T06:18:33.575387+00:00"
+}

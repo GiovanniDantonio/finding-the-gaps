@@ -1,0 +1,11 @@
+{
+ "text": "import Mathlib\n\ntheorem p10 (a b : ℤ) : Even (a ^ 2 + b ^ 2) ↔ Even (a + b) := by\n  constructor\n  · intro h\n    by_contra hn\n    rcases Int.even_or_odd (a + b) with he | ho\n    · exact hn he\n    · rcases h with ⟨m, hm⟩\n      rcases ho with ⟨k, hk⟩\n      have hsq : (a + b) ^ 2 = (a ^ 2 + b ^ 2) + 2 * (a * b) := by\n        ring\n      rw [hk, hm] at hsq\n      ring_nf at hsq\n      omega\n  · intro h\n    rcases h with ⟨k, hk⟩\n    refine ⟨2 * k ^ 2 - a * b, ?_⟩\n    calc\n      a ^ 2 + b ^ 2 = (a + b) ^ 2 - 2 * (a * b) := by ring\n      _ = (k + k) ^ 2 - 2 * (a * b) := by rw [hk]\n      _ = (2 * k ^ 2 - a * b) + (2 * k ^ 2 - a * b) := by ring",
+ "reasoning": "I did not compile this proof; no Lean or Mathlib version was used.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/84c68c220a394995975ca2e1beb1b0a9",
+ "problem": "p10",
+ "model": "notools",
+ "sample": 1,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\n```lean\nimport Mathlib\n\ntheorem p10 (a b : ℤ) : Even (a ^ 2 + b ^ 2) ↔ Even (a + b) := by\n  sorry\n```\n\nWrite a complete Lean 4 proof of this statement using Mathlib. Put the whole file, starting with `import Mathlib`, in the answer field and nothing else. Do not change the statement. Do not use `sorry` or any axiom. In the reasoning field, say whether you compiled it and, if so, with which Lean and Mathlib versions.\n",
+ "ts": "2026-09-22T06:18:08.852602+00:00"
+}

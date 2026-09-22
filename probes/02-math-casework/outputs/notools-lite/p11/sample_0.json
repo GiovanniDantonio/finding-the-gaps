@@ -1,0 +1,11 @@
+{
+ "text": "8064",
+ "reasoning": "Choose the 2 couples that are adjacent: C(4,2)=6. For a fixed pair, use inclusion-exclusion over the remaining 2 couples. Arrangements with the fixed 2 adjacent: 2^2·6!=2880. Subtract arrangements where one additional specified couple is adjacent: 2·2^3·5!=1920. Add arrangements where both additional couples are adjacent: 2^4·4!=384. Thus each fixed pair gives 2880−1920+384=1344, and the total is 6·1344=8064.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/7f4136ac81ac4179b11484f751877785",
+ "problem": "p11",
+ "model": "notools-lite",
+ "sample": 0,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nFour married couples sit in a row of 8 chairs. How many seatings have exactly two of the four couples sitting in adjacent chairs? People are distinguishable.\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+ "ts": "2026-09-22T06:29:37.849166+00:00"
+}

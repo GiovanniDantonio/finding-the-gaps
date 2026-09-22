@@ -1,0 +1,11 @@
+{
+ "text": "import Mathlib\n\ntheorem p12 (f : ℕ → ℕ) (hf : StrictMono f) (n : ℕ) : n ≤ f n := by\n  exact hf.id_le n",
+ "reasoning": "Compiled successfully (no errors, no warnings, no sorry) with `lake env lean` inside a fresh Mathlib checkout: Lean leanprover/lean4:v4.35.0-rc2, Mathlib master commit bb1587137ff0f8e711c06eabeefbb4923f4802b6 (cache fetched via `lake exe cache get`). The proof uses Mathlib's `StrictMono.id_le : StrictMono φ → ∀ n, n ≤ φ n` for φ : ℕ → ℕ.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/bb15ed41ef3642d4925079a70eb0e71c",
+ "problem": "p12",
+ "model": "tools-lean",
+ "sample": 0,
+ "prompt": "You have a full Linux machine with network access. Install Lean 4 and Mathlib (elan, then a Mathlib project via `lake exe cache get`) and compile your answer before you submit it. This takes about twenty minutes and is part of the task.\n\n```lean\nimport Mathlib\n\ntheorem p12 (f : ℕ → ℕ) (hf : StrictMono f) (n : ℕ) : n ≤ f n := by\n  sorry\n```\n\nWrite a complete Lean 4 proof of this statement using Mathlib. Put the whole file, starting with `import Mathlib`, in the answer field and nothing else. Do not change the statement. Do not use `sorry` or any axiom. In the reasoning field, say whether you compiled it and, if so, with which Lean and Mathlib versions.\n",
+ "ts": "2026-09-22T06:17:58.914606+00:00"
+}

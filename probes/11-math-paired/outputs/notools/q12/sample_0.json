@@ -1,0 +1,11 @@
+{
+ "text": "28",
+ "reasoning": "The number of integer solutions of x²+y²=n is r₂(n)=4(d₁(n)−d₃(n)), where d₁,d₃ count divisors ≡1 and ≡3 (mod 4). n=1000²=2⁶·5⁶. The power of 2 contributes nothing to the difference; all divisors of 5⁶ (5⁰..5⁶, seven of them) are ≡1 mod 4, so d₁−d₃=7 and r₂=28. Verification: 1000² = 0²+1000² = 600²+800² = 280²+960² = 352²+936², i.e. 4 points on the axes plus 3 off-axis unordered pairs × 8 sign/swap variants = 4+24 = 28.\nEXACT",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/2599968d449b4f5893ac81b266b9cece",
+ "problem": "q12",
+ "model": "notools",
+ "sample": 0,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nHow many lattice points (x, y) with integer coordinates satisfy x² + y² = 1000²?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, show how you got it. End the reasoning with one line that says exactly one of: EXACT (you carried out the full computation), RECALLED (you remembered the value), or ESTIMATED (you approximated or guessed).\n",
+ "ts": "2026-09-22T06:28:38.982882+00:00"
+}

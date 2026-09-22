@@ -1,0 +1,11 @@
+{
+ "text": "import Mathlib\n\ntheorem p10 (a b : ℤ) : Even (a ^ 2 + b ^ 2) ↔ Even (a + b) := by\n  simp [Int.even_add, Int.even_pow]",
+ "reasoning": "Not compiled (answered from reasoning alone, per instructions; no Lean/Mathlib version used). Int.even_add rewrites both sides to `Even x ↔ Even y`, and Int.even_pow gives Even (a^2) ↔ Even a ∧ 2 ≠ 0, where simp discharges 2 ≠ 0; both sides become (Even a ↔ Even b) and simp closes the goal by reflexivity.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/4daee2bbc3af4f9d87515d94a4a76d33",
+ "problem": "p10",
+ "model": "notools",
+ "sample": 2,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\n```lean\nimport Mathlib\n\ntheorem p10 (a b : ℤ) : Even (a ^ 2 + b ^ 2) ↔ Even (a + b) := by\n  sorry\n```\n\nWrite a complete Lean 4 proof of this statement using Mathlib. Put the whole file, starting with `import Mathlib`, in the answer field and nothing else. Do not change the statement. Do not use `sorry` or any axiom. In the reasoning field, say whether you compiled it and, if so, with which Lean and Mathlib versions.\n",
+ "ts": "2026-09-22T06:18:08.852403+00:00"
+}

@@ -1,0 +1,386 @@
+[
+ {
+  "problem": "p01",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "19441",
+  "correct": false,
+  "label": "ESTIMATED"
+ },
+ {
+  "problem": "p02",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "90888",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p03",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "251595969",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p04",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "10880",
+  "correct": true,
+  "label": "RECALLED"
+ },
+ {
+  "problem": "p05",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "1026576",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p06",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "256",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p07",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "145601",
+  "correct": true,
+  "label": "RECALLED"
+ },
+ {
+  "problem": "p08",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "59246",
+  "correct": false,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p09",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "1224",
+  "correct": true,
+  "label": "RECALLED"
+ },
+ {
+  "problem": "p10",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "2779074",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p11",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "27487790720",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p12",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "3141549",
+  "correct": true,
+  "label": "RECALLED"
+ },
+ {
+  "problem": "q01",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "447",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q02",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "3",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q03",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "25",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q04",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "11",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q05",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "45",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q06",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "61",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q07",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "233",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q08",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "11",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q09",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "8",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q10",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "48",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q11",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "2",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q12",
+  "mode": "notools",
+  "sample": "sample_0",
+  "answer": "28",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p01",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "19443",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p02",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "90888",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p03",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "251595969",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p04",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "10880",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p05",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "1026576",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p06",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "256",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p07",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "145601",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p08",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "59576",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p09",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "1224",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p10",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "2779074",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p11",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "27487790720",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "p12",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "3141549",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q01",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "447",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q02",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "3",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q03",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "25",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q04",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "11",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q05",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "45",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q06",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "61",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q07",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "233",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q08",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "11",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q09",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "8",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q10",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "48",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q11",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "2",
+  "correct": true,
+  "label": "EXACT"
+ },
+ {
+  "problem": "q12",
+  "mode": "tools",
+  "sample": "sample_0",
+  "answer": "28",
+  "correct": true,
+  "label": "EXACT"
+ }
+]

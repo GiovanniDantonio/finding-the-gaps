@@ -1,0 +1,11 @@
+{
+ "text": "35127",
+ "reasoning": "Using six-digit strings with leading zeros to represent integers from 0 through 999999, count digit tuples summing to 20. Case 1: no digit exceeds 9: C(25,5)=53130. Case 2: exactly one digit is at least 10 before correction: subtract 6C(15,5)=18018. Case 3: exactly two digits are at least 10: add C(6,2)C(5,5)=15. Three such digits are impossible because their sum would exceed 20. Thus 53130−18018+15=35127. The integer 1,000,000 has digit sum 1 and contributes nothing.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/1feee26064bd4d16aa05a51da733ebbf",
+ "problem": "p02",
+ "model": "notools-lite",
+ "sample": 0,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nHow many integers between 1 and 1,000,000 inclusive have digit sum exactly 20?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+ "ts": "2026-09-22T06:29:52.840569+00:00"
+}

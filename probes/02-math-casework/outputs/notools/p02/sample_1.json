@@ -1,0 +1,11 @@
+{
+ "text": "35127",
+ "reasoning": "Integers 1..1,000,000 with digit sum 20. Since 1,000,000 has digit sum 1, it doesn't count, and 0 has digit sum 0, so the problem equals counting 6-digit strings d1..d6 (each 0-9, leading zeros allowed, i.e. 000000-999999) with sum 20. Inclusion-exclusion on digits exceeding 9: N = sum_j (-1)^j C(6,j) C(20-10j+5,5) = C(25,5) - 6*C(15,5) + 15*C(5,5) = 53130 - 18018 + 15 = 35127. Case counts: j=0 (no constraint) 53130; j=1 (one digit >=10) subtract 6*3003 = 18018; j=2 (two digits >=10) add 15*1 = 15.",
+ "status": "waiting_for_user",
+ "session_url": "https://app.devin.ai/sessions/70933699933747f7a5789289e8106335",
+ "problem": "p02",
+ "model": "notools",
+ "sample": 1,
+ "prompt": "Answer from reasoning alone. Do not run code, open a browser, search the web, or use any tool other than providing the structured output. Put the final answer in the answer field.\n\nHow many integers between 1 and 1,000,000 inclusive have digit sum exactly 20?\n\nGive the final answer as a single integer, and nothing else, in the answer field. In the reasoning field, lay out the cases you split on and the count for each case.\n",
+ "ts": "2026-09-22T06:18:31.309022+00:00"
+}
